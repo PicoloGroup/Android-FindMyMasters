@@ -2,11 +2,13 @@ package com.example.findmymaster.LayerSystem;
 
 import com.example.findmymaster.EventSystem.EventBase;
 
-public abstract class LayerBase {
+public interface LayerBase {
 
-    public LayerBase()
-    {
-    }
+    //Event processing method
+    void processEvent(EventBase event);
 
-    public abstract void processEvent(EventBase event);
+    //Methods called respectively when attached or detached to a LayerStack object.
+    void onAttach();
+
+    void onDetach();
 }

@@ -16,6 +16,7 @@ public class LayerStack {
     public void insertLayer(LayerBase layer)
     {
         layerStack.add(layer);
+        layer.onAttach();
     }
 
     public void processEvent(EventBase event)

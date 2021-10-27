@@ -4,7 +4,8 @@ public abstract class EventBase {
 
     public enum EventType
     {
-
+        LOGIN_EVENT,
+        REGISTRATION_EVENT
     }
 
     private EventType eventType;
