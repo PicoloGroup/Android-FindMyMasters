@@ -1,10 +1,11 @@
-package com.example.findmymaster.AppDomain.EventSystem;
+package com.example.findmymaster.EventSystem;
 
 public abstract class EventBase {
 
     public enum EventType
     {
-
+        LOGIN_EVENT,
+        REGISTRATION_EVENT
     }
 
     private EventType eventType;
@@ -15,20 +16,21 @@ public abstract class EventBase {
         eventType = type;
     }
 
-    public void Handle()
+    public void handle()
     {
         isHandled = false;
     }
 
-    public boolean IsHandled()
+    public boolean isHandled()
     {
         return isHandled;
     }
 
-    public EventType GetEventType()
+    public EventType getEventType()
     {
         return eventType;
     }
 
-    public abstract void ToString();
+    @Override
+    public abstract String toString();
 }

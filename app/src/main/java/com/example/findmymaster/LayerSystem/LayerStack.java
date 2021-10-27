@@ -1,5 +1,5 @@
-package com.example.findmymaster.AppDomain.LayerSystem;
-import com.example.findmymaster.AppDomain.EventSystem.EventBase;
+package com.example.findmymaster.LayerSystem;
+import com.example.findmymaster.EventSystem.EventBase;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -13,17 +13,18 @@ public class LayerStack {
         layerStack = new ArrayList<LayerBase>();
     }
 
-    public void InsertLayer(LayerBase layer)
+    public void insertLayer(LayerBase layer)
     {
         layerStack.add(layer);
+        layer.onAttach();
     }
 
-    public void ProcessEvent(EventBase event)
+    public void processEvent(EventBase event)
     {
         for (LayerBase layer : layerStack)
         {
-            if(!event.IsHandled()) break;
-            layer.ProcessEvent(event);
+            if(!event.isHandled()) break;
+            layer.processEvent(event);
         }
     }
 }
