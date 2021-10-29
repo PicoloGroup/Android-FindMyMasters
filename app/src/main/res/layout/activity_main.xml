@@ -139,7 +139,7 @@
         app:layout_constraintTop_toBottomOf="@+id/LoginPage_loginPasswordField" />
 
     <CheckBox
-        android:id="@+id/checkbox"
+        android:id="@+id/LoginPage_rememberMeCheckbox"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="24dp"
@@ -156,7 +156,7 @@
         android:clickable="true"
         android:minHeight="48dp"
         android:text="@string/LoginPage_ForgetPassword"
-        android:textColor="@color/login_form_details"
+        android:textColor="#448AFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/footer_line"
         app:layout_constraintEnd_toStartOf="@id/guideline_right"
@@ -196,7 +196,7 @@
         app:layout_constraintVertical_bias="0.037" />
 
     <TextView
-        android:id="@+id/LoginPage_noAccountText"
+        android:id="@+id/LoginPage_signUpLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
