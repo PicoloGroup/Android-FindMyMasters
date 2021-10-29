@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">FindMyMaster</string>
+    <string name="LoginPage_WelcomeMessage">Welcome To\n Find My\n Master\'s</string>
+    <string name="LoginPage_Password">Password</string>
+    <string name="loginPage_User">User Name</string>
+    <string name="LoginPage_RememberMe">Remember me ?</string>
+    <string name="LoginPage_NoAccount">Don\'t Have an Account?</string>
+    <string name="LoginPage_LoginButtonString">Login</string>
+    <string name="LoginPage_ForgetPassword">Don\'t Remember Password?</string>
+    <string name="LoginPage_SignUpString">Sign Up</string>
+    <string name="LoginPage_AppIcon">AppIcon</string>
 </resources>
