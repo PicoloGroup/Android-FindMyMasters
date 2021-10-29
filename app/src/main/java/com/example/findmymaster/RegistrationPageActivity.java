@@ -1,10 +1,11 @@
-package com.example.findmymaster.AppUI.UIPages;
+package com.example.findmymaster;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import com.example.findmymaster.R;
+
+import com.example.findmymaster.AppUI.UIPages.LoginPageActivity;
 
 public class RegistrationPageActivity extends AppCompatActivity {
 
@@ -12,7 +13,6 @@ public class RegistrationPageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration_page);
-        Intent intent = new Intent(RegistrationPageActivity.this,LoginPageActivity.class);
-        startActivity(intent);
+
     }
 }

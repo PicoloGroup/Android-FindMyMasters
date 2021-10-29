@@ -17,7 +17,9 @@ import androidx.annotation.Nullable;
 import com.example.findmymaster.AppUI.UIBase;
 import com.example.findmymaster.EventSystem.EventDispatcher;
 import com.example.findmymaster.R;
+import com.example.findmymaster.RegistrationPageActivity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -30,14 +32,16 @@ public class LoginPageActivity extends UIBase {
     private UIBase mainPage;
 
 
-    public LoginPageActivity(){
-
+    public LoginPageActivity()
+    {
         super(EventDispatcher.getInstance());
 
+        actors = new ArrayList<android.widget.TextView>();
     }
+
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
 
         //Creating actors
@@ -63,7 +67,7 @@ public class LoginPageActivity extends UIBase {
         SharedPreferences preferences = getSharedPreferences("checkbox",MODE_PRIVATE);
         String checkbox = preferences.getString("RememberMeCheckBox","");
         if (checkbox.equals("true")) {
-            Intent intent = new Intent(LoginPageActivity.this,RegistrationPageActivity.class);
+            Intent intent = new Intent(LoginPageActivity.this, RegistrationPageActivity.class);
             startActivity(intent);
         }
         else if (checkbox.equals("false")){
