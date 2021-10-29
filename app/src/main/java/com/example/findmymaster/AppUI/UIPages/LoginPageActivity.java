@@ -14,12 +14,15 @@ import com.example.findmymaster.R;
 import java.util.List;
 
 
-public class LoginPageUI extends UIBase {
+public class LoginPageActivity extends UIBase {
 
     //a list of listenable actors
-    List<android.widget.TextView> actors;
+    private List<android.widget.TextView> actors;
 
-    public LoginPageUI(EventDispatcher dispatcher)
+    private UIBase registrationPage;
+    private UIBase mainPage;
+
+    public LoginPageActivity(EventDispatcher dispatcher)
     {
 
         //Setting the event dispatcher reference
