@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_login"
     android:clickable="true"
-    tools:context=".MainActivity"
+    tools:context=".AppUI.UIPages.LoginPageActivity"
     android:focusable="true">
 
 
