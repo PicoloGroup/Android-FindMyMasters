@@ -63,7 +63,6 @@ public class LoginPageActivity extends UIBase {
 
         final CheckBox rememberMeCheckBox = findViewById(R.id.LoginPage_rememberMeCheckbox);
 
-
         SharedPreferences preferences = getSharedPreferences("checkbox",MODE_PRIVATE);
         String checkbox = preferences.getString("RememberMeCheckBox","");
         if (checkbox.equals("true")) {
@@ -73,8 +72,7 @@ public class LoginPageActivity extends UIBase {
         else if (checkbox.equals("false")){
             Toast.makeText(this, "Please Sign in", Toast.LENGTH_SHORT).show();
     }
-
-
+        
         rememberMeCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -118,14 +116,14 @@ public class LoginPageActivity extends UIBase {
 
         actors.add(loginButton);
 
-        //Forgot Password Link
+        //Forgot Password Link TextView
         final TextView forgotPasswordLink = findViewById(R.id.LoginPage_forgotPasswordLink);
 
         //........
 
         actors.add(forgotPasswordLink);
 
-        //Sign up link
+        //Sign up link TextView
         final TextView signUpLink = findViewById(R.id.LoginPage_signUpLink);
 
         signUpLink.setOnClickListener(new View.OnClickListener() {

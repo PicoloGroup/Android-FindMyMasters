@@ -70,7 +70,7 @@
          />
 
     <EditText
-        android:id="@+id/RegistrationPage_registrationEmailField"
+        android:id="@+id/RegistrationPage_EmailField"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="24dp"
@@ -96,7 +96,7 @@
          />
 
     <EditText
-        android:id="@+id/RegistrationPage_registrationPasswordField"
+        android:id="@+id/RegistrationPage_passwordField"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="24dp"
@@ -118,11 +118,11 @@
         app:layout_constraintEnd_toStartOf="@id/guideline_right"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@+id/RegistrationPage_registrationEmailField"
+        app:layout_constraintTop_toBottomOf="@+id/RegistrationPage_EmailField"
          />
 
     <EditText
-        android:id="@+id/RegistrationPage_registrationConfirmPasswordField"
+        android:id="@+id/RegistrationPage_confirmPasswordField"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="24dp"
@@ -144,7 +144,7 @@
         app:layout_constraintEnd_toStartOf="@id/guideline_right"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@+id/RegistrationPage_registrationPasswordField"
+        app:layout_constraintTop_toBottomOf="@+id/RegistrationPage_passwordField"
          />
 
     <Button
@@ -164,7 +164,7 @@
 
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@id/RegistrationPage_registrationConfirmPasswordField" />
+        app:layout_constraintTop_toBottomOf="@id/RegistrationPage_confirmPasswordField" />
 
 
     <View
@@ -187,7 +187,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="@string/LoginPage_noAccount"
+        android:text="@string/RegistrationPage_haveAccount"
         android:textColor="@color/login_form_details"
         android:textSize="12sp"
 
