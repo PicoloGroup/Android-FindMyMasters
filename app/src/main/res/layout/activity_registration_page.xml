@@ -4,17 +4,219 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
     tools:context=".RegistrationPageActivity">
 
-    <TextView
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/LoginPage_WelcomeMessage"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical"
+
+        app:layout_constraintGuide_begin="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        app:layout_constraintGuide_end="24dp" />
+
+    <TextView
+        android:id="@+id/RegistrationPage_Quote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/RegistrationPage_Quote"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto"
+
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/RegistrationPage_usernameField"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/colorAccent"
+        android:drawableEnd="@drawable/ic_user"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/RegistrationPage_usernameField"
+        android:inputType="text"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="#818181"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:importantForAutofill="no"
+
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/RegistrationPage_Quote"
+         />
+
+    <EditText
+        android:id="@+id/RegistrationPage_registrationEmailField"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/colorAccent"
+        android:drawableEnd="@drawable/ic_email"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/RegistrationPage_emailField"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="#FC818181"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:importantForAutofill="no"
+
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/RegistrationPage_usernameField"
+         />
+
+    <EditText
+        android:id="@+id/RegistrationPage_registrationPasswordField"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/colorAccent"
+        android:drawableEnd="@drawable/ic_lock"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/RegistrationPage_passwordField"
+        android:inputType="textPassword"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="#FC818181"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:importantForAutofill="no"
+
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/RegistrationPage_registrationEmailField"
+         />
+
+    <EditText
+        android:id="@+id/RegistrationPage_registrationConfirmPasswordField"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/colorAccent"
+        android:drawableEnd="@drawable/ic_confirm"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/RegistrationPage_confirmPasswordField"
+        android:inputType="textPassword"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="#FC818181"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:importantForAutofill="no"
+
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/RegistrationPage_registrationPasswordField"
+         />
+
+    <Button
+        android:id="@+id/RegistrationPage_registerButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="64dp"
+        android:background="@drawable/rounded_corner"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/RegistrationPage_registerButtonString"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/RegistrationPage_registrationConfirmPasswordField" />
+
+
+    <View
+        android:id="@+id/footer_line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="120dp"
+        android:background="#fff"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/RegistrationPage_registerButton"
+        app:layout_constraintVertical_bias="0.991"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/have_acc_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/LoginPage_noAccount"
+        android:textColor="@color/login_form_details"
+        android:textSize="12sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.429"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/footer_line"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/RegistrationPage_signInLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:text="@string/RegistrationPage_signInString"
+        android:textColor="#448AFF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/have_acc_text"
+        app:layout_constraintTop_toBottomOf="@+id/footer_line"
+        app:layout_constraintVertical_bias="0.037" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -30,12 +30,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:visibility="visible"
-
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/masters_icon"
-        android:contentDescription="@string/LoginPage_AppIcon" />
+        android:contentDescription="@string/LoginPage_appIcon" />
 
     <TextView
         android:id="@+id/LoginPage_WelcomeMessageField"
@@ -44,10 +43,13 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="@string/LoginPage_WelcomeMessage"
+        android:text="@string/LoginPage_welcomeMessage"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
+        android:fontFamily="@font/roboto"
+        android:textStyle="bold"
+
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/LoginPage_MastersIcon" />
@@ -62,7 +64,7 @@
         android:background="@color/colorAccent"
         android:drawableEnd="@drawable/ic_user"
         android:fontFamily="@font/roboto"
-        android:hint="@string/loginPage_User"
+        android:hint="@string/loginPage_user"
         android:inputType="text"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
@@ -75,7 +77,6 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/LoginPage_WelcomeMessageField"
-        tools:ignore="MissingConstraints"
         android:importantForAutofill="no" />
 
     <EditText
@@ -88,8 +89,7 @@
         android:background="@color/colorAccent"
         android:drawableEnd="@drawable/ic_lock"
         android:fontFamily="@font/roboto"
-
-        android:hint="@string/LoginPage_Password"
+        android:hint="@string/LoginPage_password"
         android:inputType="textPassword"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
@@ -97,12 +97,13 @@
         android:textColorHint="#FC818181"
         android:textSize="16sp"
         android:textStyle="bold"
+        android:importantForAutofill="no"
+
         app:layout_constraintEnd_toStartOf="@id/guideline_right"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/LoginPage_usernameField"
-        tools:ignore="MissingConstraints"
-        android:importantForAutofill="no" />
+         />
 
     <Button
         android:id="@+id/LoginPage_loginButton"
@@ -113,7 +114,7 @@
         android:layout_marginEnd="64dp"
         android:background="@drawable/rounded_corner"
         android:fontFamily="sans-serif-black"
-        android:text="@string/LoginPage_LoginButtonString"
+        android:text="@string/LoginPage_loginButtonString"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/colorPrimaryDark"
@@ -130,7 +131,7 @@
         android:layout_margin="16dp"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="@string/LoginPage_RememberMe"
+        android:text="@string/LoginPage_rememberMe"
         android:textColor="@color/colorAccent"
         android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
@@ -155,7 +156,7 @@
         android:layout_marginTop="16dp"
         android:clickable="true"
         android:minHeight="48dp"
-        android:text="@string/LoginPage_ForgetPassword"
+        android:text="@string/LoginPage_forgetPassword"
         android:textColor="@color/login_form_details"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/footer_line"
@@ -170,7 +171,7 @@
         android:id="@+id/footer_line"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:layout_marginBottom="88dp"
+        android:layout_marginBottom="90dp"
         android:background="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/guideline_right"
@@ -185,7 +186,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="@string/LoginPage_NoAccount"
+        android:text="@string/LoginPage_noAccount"
         android:textColor="@color/login_form_details"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -205,7 +206,7 @@
         android:focusable="true"
         android:minWidth="48dp"
         android:minHeight="48dp"
-        android:text="@string/LoginPage_SignUpString"
+        android:text="@string/LoginPage_signUpString"
         android:textColor="#448AFF"
         android:textSize="12sp"
         android:textStyle="bold"

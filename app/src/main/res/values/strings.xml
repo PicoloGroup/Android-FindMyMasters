@@ -1,12 +1,26 @@
 <resources>
+    //LOGIN PAGE STRINGS
     <string name="app_name">FindMyMaster</string>
-    <string name="LoginPage_WelcomeMessage">Welcome To\n Find My\n Master\'s</string>
-    <string name="LoginPage_Password">Password</string>
-    <string name="loginPage_User">User Name</string>
-    <string name="LoginPage_RememberMe">Remember me ?</string>
-    <string name="LoginPage_NoAccount">Don\'t Have an Account?</string>
-    <string name="LoginPage_LoginButtonString">Login</string>
-    <string name="LoginPage_ForgetPassword">Don\'t Remember Password?</string>
-    <string name="LoginPage_SignUpString">Sign Up</string>
-    <string name="LoginPage_AppIcon">AppIcon</string>
+    <string name="LoginPage_welcomeMessage">Welcome To\n Find My\n Master\'s</string>
+    <string name="LoginPage_password">Password</string>
+    <string name="loginPage_user">User Name</string>
+    <string name="LoginPage_rememberMe">Remember me ?</string>
+    <string name="LoginPage_noAccount">Don\'t Have an Account?</string>
+    <string name="LoginPage_loginButtonString">LOGIN</string>
+    <string name="LoginPage_forgetPassword">Don\'t Remember Password?</string>
+    <string name="LoginPage_signUpString">Sign Up</string>
+    <string name="LoginPage_appIcon">AppIcon</string>
+    
+    //REGISTRATION PAGE STRINGS
+    <string name="RegistrationPage_Quote">You are in\n Masterful Hands\n Your Future\n Await!</string>
+    <string name="RegistrationPage_usernameField">Enter Your User Name</string>
+    <string name="RegistrationPage_emailField">Enter Your Email</string>
+    <string name="RegistrationPage_passwordField">Enter Your Password</string>
+    <string name="RegistrationPage_confirmPasswordField">Confirm Your Password</string>
+    <string name="RegistrationPage_registerButtonString">REGISTER</string>
+    <string name="RegistrationPage_haveAccount">Already Have an Account?</string>
+    <string name="RegistrationPage_signInString">Sign in</string>
+
+
+
 </resources>
