@@ -3,7 +3,6 @@ package com.example.findmymaster.AppUI.UIPages;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -12,12 +11,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
-
 import com.example.findmymaster.AppUI.UIBase;
 import com.example.findmymaster.EventSystem.EventDispatcher;
 import com.example.findmymaster.R;
-import com.example.findmymaster.RegistrationPageActivity;
 
 import java.util.ArrayList;
 import java.util.List;

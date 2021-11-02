@@ -1,6 +1,4 @@
-package com.example.findmymaster;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.findmymaster.AppUI.UIPages;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,11 +6,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.findmymaster.AppUI.UIBase;
-import com.example.findmymaster.AppUI.UIPages.LoginPageActivity;
 import com.example.findmymaster.EventSystem.EventDispatcher;
+import com.example.findmymaster.R;
 
 import java.util.ArrayList;
 import java.util.List;

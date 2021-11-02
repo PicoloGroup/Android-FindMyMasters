@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat" >
         <activity
-            android:name=".RegistrationPageActivity"
+            android:name=".AppUI.UIPages.RegistrationPageActivity"
             android:exported="false" />
         <activity
             android:name=".AppUI.UIPages.LoginPageActivity"
