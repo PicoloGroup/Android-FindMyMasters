@@ -9,6 +9,7 @@ public class EventDispatcher {
 
     private EventDispatcher()
     {
+        appDomain = AppDomain.getInstance();
     }
 
     public void setDomainReference(AppDomain domain)
