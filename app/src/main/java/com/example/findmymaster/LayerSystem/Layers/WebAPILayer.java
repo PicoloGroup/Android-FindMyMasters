@@ -1,6 +1,7 @@
 package com.example.findmymaster.LayerSystem.Layers;
 
 import com.example.findmymaster.AppDomain.AppDomain;
+import com.example.findmymaster.AppDomain.WebAPIHandler;
 import com.example.findmymaster.EventSystem.EventBase;
 import com.example.findmymaster.EventSystem.Events.LoginEvent;
 import com.example.findmymaster.LayerSystem.LayerBase;
@@ -8,10 +9,13 @@ import com.example.findmymaster.LayerSystem.LayerBase;
 public class WebAPILayer implements LayerBase {
 
     private AppDomain appDomain;
+    private WebAPIHandler webAPIHandler;
 
-    public WebAPILayer()
+    public WebAPILayer(WebAPIHandler webAPIHandler)
+
     {
         appDomain = AppDomain.getInstance();
+        this.webAPIHandler = webAPIHandler;
     }
 
     @Override
@@ -33,9 +37,11 @@ public class WebAPILayer implements LayerBase {
 
     }
 
-    private void processLoginEvent(LoginEvent event)
+    private void processLoginEvent(LoginEvent loginEvent)
     {
-
+        //WebserviceHandler.login(loginEvent.getUserName(), loginEvent.getPassword());
     }
+
+
 
 }

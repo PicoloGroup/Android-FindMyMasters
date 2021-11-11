@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.example.findmymaster.AppUI.UIBase;
 import com.example.findmymaster.EventSystem.EventDispatcher;
+import com.example.findmymaster.ObserverSystem.Observers.LoginObserver;
 import com.example.findmymaster.R;
 
 import java.util.ArrayList;
@@ -39,6 +40,9 @@ public class LoginPageActivity extends UIBase {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
+
+        //Setting observer reference
+        LoginObserver.SetLoginPageReference(this);
 
         //Creating actors
         //Username EditText
@@ -134,6 +138,14 @@ public class LoginPageActivity extends UIBase {
 
         actors.add(signUpLink);
 
+    }
+
+    @Override
+    public void onDestroy()
+    {
+        super.onDestroy();
+
+        LoginObserver.ResetLoginPageReference();
     }
 
 }

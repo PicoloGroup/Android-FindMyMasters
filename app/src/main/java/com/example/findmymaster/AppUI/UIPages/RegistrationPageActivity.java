@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.example.findmymaster.AppUI.UIBase;
 import com.example.findmymaster.EventSystem.EventDispatcher;
+import com.example.findmymaster.ObserverSystem.Observers.RegisterObserver;
 import com.example.findmymaster.R;
 
 import java.util.ArrayList;
@@ -30,6 +31,9 @@ public class RegistrationPageActivity extends UIBase {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        RegisterObserver.setRegistrationPageReference(this);
+
         setContentView(R.layout.activity_registration_page);
 
         //Creating Actors
@@ -88,4 +92,12 @@ public class RegistrationPageActivity extends UIBase {
         actors.add(signInLink);
 
     }
+
+    public void onDestroy() {
+
+        super.onDestroy();
+
+        RegisterObserver.resetRegistrationPageReference();
+    }
+
 }

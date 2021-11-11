@@ -1,14 +1,17 @@
 package com.example.findmymaster.AppDomain;
 
-public class WebAPIHandler {
+import android.content.Context;
 
-    public WebAPIHandler()
+public abstract class WebAPIHandler {
+
+    protected String baseURL;
+
+    protected WebAPIHandler(String baseURL)
     {
-
+        this.baseURL = baseURL;
     }
 
-    boolean login(String uName, String uPassWord)
-    {
-        return true;
-    }
+    public abstract void postLoginRequest(String email, String passWord);
+
+    public abstract void postSignUpRequest(String email, String password);
 }
