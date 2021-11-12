@@ -27,7 +27,7 @@ public class FastNetworkRequestHandler extends WebAPIHandler {
     @Override
     public void postLoginRequest(String email, String password) {
         AndroidNetworking
-                .post(super.baseURL + "/auth/student/signup")
+                .post(super.baseURL + "auth/student/login/")
                 .addBodyParameter("email", email)
                 .addBodyParameter("password", password)
                 .setTag("request")
@@ -49,20 +49,22 @@ public class FastNetworkRequestHandler extends WebAPIHandler {
     public void postSignUpRequest(String email, String password) {
 
         AndroidNetworking
-                .post(super.baseURL + "/auth/student/signup")
+                .post(super.baseURL + "auth/student/signup/")
                 .addBodyParameter("email", email)
                 .addBodyParameter("password", password)
-                .setTag("request")
+                .setTag("test")
                 .setPriority(Priority.MEDIUM)
                 .build()
                 .getAsJSONObject(new JSONObjectRequestListener() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        AppDomain.getInstance().handleregisterResult(true);
+                        AppDomain.getInstance().handleRegisterResult(true);
+                        System.out.println(response.toString());
                     }
                     @Override
                     public void onError(ANError error) {
-                        AppDomain.getInstance().handleregisterResult(false);
+                        System.out.println(error.toString());
+                        AppDomain.getInstance().handleRegisterResult(false);
                     }
                 });
     }

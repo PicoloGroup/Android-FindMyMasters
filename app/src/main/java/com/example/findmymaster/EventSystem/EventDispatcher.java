@@ -12,11 +12,6 @@ public class EventDispatcher {
         appDomain = AppDomain.getInstance();
     }
 
-    public void setDomainReference(AppDomain domain)
-    {
-        appDomain = domain;
-    }
-
     public static EventDispatcher getInstance()
     {
         if(instance == null)
@@ -31,6 +26,5 @@ public class EventDispatcher {
     {
         appDomain.processEvent(event);
     }
-
 
 }

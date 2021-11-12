@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.example.findmymaster.AppUI.UIBase;
 import com.example.findmymaster.EventSystem.EventDispatcher;
+import com.example.findmymaster.EventSystem.Events.RegisterEvent;
 import com.example.findmymaster.ObserverSystem.Observers.RegisterObserver;
 import com.example.findmymaster.R;
 
@@ -71,10 +72,20 @@ public class RegistrationPageActivity extends UIBase {
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RegistrationPageActivity.this, LoginPageActivity.class);
-                startActivity(intent);
+
+                EditText emailField = findViewById(R.id.RegistrationPage_EmailField);
+                EditText passwordField = findViewById(R.id.RegistrationPage_passwordField);
+
+                EventDispatcher.getInstance().dispatchEvent(
+                        new RegisterEvent(
+                                emailField.getText().toString(),
+                                passwordField.getText().toString()
+                                )
+                        );
             }
         });
+
+        actors.add(registerButton);
 
         //Sign in Link TextView
         final TextView signInLink = findViewById(R.id.RegistrationPage_signInLink);
@@ -85,6 +96,7 @@ public class RegistrationPageActivity extends UIBase {
                 Intent intent = new Intent(RegistrationPageActivity.this, LoginPageActivity.class);
                 startActivity(intent);
             }
+
         });
 
         //........

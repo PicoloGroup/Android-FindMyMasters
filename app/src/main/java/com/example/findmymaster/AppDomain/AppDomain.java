@@ -55,7 +55,7 @@ public class AppDomain{
 
     public void initialize(Context context)
     {
-        webAPIHandler = new FastNetworkRequestHandler("local:3000/", context);
+        webAPIHandler = new FastNetworkRequestHandler("http://192.168.1.76:3000/", context);
 
         layerStack = new LayerStack();
         layerStack.insertLayer(new WebAPILayer(webAPIHandler));
@@ -84,7 +84,7 @@ public class AppDomain{
 
     }
 
-    public void handleregisterResult(boolean result)
+    public void handleRegisterResult(boolean result)
     {
         registerState.setRegisterState(result);
         notifyObservers(ObserverBase.ObserverType.REGISTARTION_OBSERVER);

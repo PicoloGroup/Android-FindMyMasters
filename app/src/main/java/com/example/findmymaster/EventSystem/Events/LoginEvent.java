@@ -4,25 +4,25 @@ import com.example.findmymaster.EventSystem.EventBase;
 
 public class LoginEvent extends EventBase {
 
-    private String userName;
+    private String email;
     private String password;
 
     public LoginEvent(String userName, String password)
     {
         super(EventType.LOGIN_EVENT);
 
-        this.userName = userName;
+        this.email = userName;
         this.password = password;
     }
 
     @Override
     public String toString() {
-        return userName + " " + password;
+        return "Login Event: " + email + " " + password;
     }
 
-    public String getUserName()
+    public String getEmail()
     {
-        return  userName;
+        return email;
     }
 
     public String getPassword()

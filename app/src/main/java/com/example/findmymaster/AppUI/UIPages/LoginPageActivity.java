@@ -11,8 +11,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.findmymaster.AppDomain.AppDomain;
 import com.example.findmymaster.AppUI.UIBase;
 import com.example.findmymaster.EventSystem.EventDispatcher;
+import com.example.findmymaster.EventSystem.Events.LoginEvent;
 import com.example.findmymaster.ObserverSystem.Observers.LoginObserver;
 import com.example.findmymaster.R;
 
@@ -43,6 +45,9 @@ public class LoginPageActivity extends UIBase {
 
         //Setting observer reference
         LoginObserver.SetLoginPageReference(this);
+
+        //Initializing the domain
+        AppDomain.getInstance().initialize(getApplicationContext());
 
         //Creating actors
         //Username EditText
@@ -105,8 +110,22 @@ public class LoginPageActivity extends UIBase {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /*
                 Intent intent = new Intent(LoginPageActivity.this, RegistrationPageActivity.class);
                 startActivity(intent);
+
+                 */
+
+                EditText emailField = findViewById(R.id.LoginPage_usernameField);
+                EditText passwordField = findViewById(R.id.LoginPage_loginPasswordField);
+
+                EventDispatcher.getInstance().dispatchEvent(
+                        new LoginEvent(
+                                emailField.toString(),
+                                passwordField.toString()
+                                )
+                );
+
             }
         });
 

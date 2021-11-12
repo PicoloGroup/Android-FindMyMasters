@@ -4,6 +4,7 @@ import com.example.findmymaster.AppDomain.AppDomain;
 import com.example.findmymaster.AppDomain.WebAPIHandler;
 import com.example.findmymaster.EventSystem.EventBase;
 import com.example.findmymaster.EventSystem.Events.LoginEvent;
+import com.example.findmymaster.EventSystem.Events.RegisterEvent;
 import com.example.findmymaster.LayerSystem.LayerBase;
 
 public class WebAPILayer implements LayerBase {
@@ -20,6 +21,20 @@ public class WebAPILayer implements LayerBase {
 
     @Override
     public void processEvent(EventBase event) {
+
+        switch (event.getEventType())
+        {
+            case LOGIN_EVENT:
+                processLoginEvent((LoginEvent) event);
+                event.handle();
+                break;
+            case REGISTRATION_EVENT:
+                processRegisterEvent((RegisterEvent) event);
+                event.handle();
+                break;
+        }
+
+
         if(event.getEventType() == EventBase.EventType.LOGIN_EVENT)
         {
           processLoginEvent((LoginEvent) event);
@@ -39,7 +54,12 @@ public class WebAPILayer implements LayerBase {
 
     private void processLoginEvent(LoginEvent loginEvent)
     {
-        //WebserviceHandler.login(loginEvent.getUserName(), loginEvent.getPassword());
+        webAPIHandler.postLoginRequest(loginEvent.getEmail(), loginEvent.getPassword());
+    }
+
+    private void processRegisterEvent(RegisterEvent registerEvent)
+    {
+        webAPIHandler.postSignUpRequest(registerEvent.getEmail(), registerEvent.getPassword());
     }
 
 

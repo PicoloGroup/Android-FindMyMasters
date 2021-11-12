@@ -23,7 +23,7 @@ public class LayerStack {
     {
         for (LayerBase layer : layerStack)
         {
-            if(!event.isHandled()) break;
+            if(event.isHandled()) break;
             layer.processEvent(event);
         }
     }
