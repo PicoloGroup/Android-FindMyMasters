@@ -24,7 +24,6 @@ public class AppDomain{
 
     public class LoginState{
         private boolean loginSuccessful = false;
-        private Token token;
 
         public boolean getLoginState() { return loginSuccessful;}
         public void setLoginState(boolean state) {this.loginSuccessful = state;}

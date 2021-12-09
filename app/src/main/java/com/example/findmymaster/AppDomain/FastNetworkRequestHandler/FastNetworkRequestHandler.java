@@ -4,10 +4,15 @@ import android.content.Context;
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
+import com.androidnetworking.gsonparserfactory.GsonParserFactory;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
+import com.example.findmymaster.AppDomain.APIClasses.Token;
 import com.example.findmymaster.AppDomain.AppDomain;
 import com.example.findmymaster.AppDomain.Error;
 import com.example.findmymaster.AppDomain.WebAPIHandler;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonParser;
 
 import org.json.JSONObject;
 
@@ -19,11 +24,17 @@ A network request handler implemented with fast networking library for java.
 */
 
 public class FastNetworkRequestHandler extends WebAPIHandler {
-
+    Token token;
+    Gson gson;
 
     public FastNetworkRequestHandler(String baseURL, Context context)
     {
         super(baseURL);
+        token = null;
+
+        GsonBuilder builder = new GsonBuilder();
+        builder.setPrettyPrinting();
+        gson = builder.create();
 
         AndroidNetworking.initialize(context);
     }
@@ -53,7 +64,10 @@ public class FastNetworkRequestHandler extends WebAPIHandler {
                 .getAsJSONObject(new JSONObjectRequestListener() {
                     @Override
                     public void onResponse(JSONObject response) {
+                        token = gson.fromJson(response.toString(), Token.class);
+
                         AppDomain.getInstance().handleLoginResult(null);
+
                     }
                     @Override
                     public void onError(ANError error) {
@@ -75,6 +89,7 @@ public class FastNetworkRequestHandler extends WebAPIHandler {
                 .getAsJSONObject(new JSONObjectRequestListener() {
                     @Override
                     public void onResponse(JSONObject response) {
+
                         AppDomain.getInstance().handleRegisterResult(null);
                         System.out.println(response.toString());
                     }
