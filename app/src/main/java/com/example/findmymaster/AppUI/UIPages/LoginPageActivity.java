@@ -43,11 +43,11 @@ public class LoginPageActivity extends UIBase {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
 
-        //Setting observer reference
-        LoginObserver.SetLoginPageReference(this);
-
         //Initializing the domain
         AppDomain.getInstance().initialize(getApplicationContext());
+
+        //Setting observer reference
+        LoginObserver.activateObserver(this);
 
         //Creating actors
         //Username EditText
@@ -125,7 +125,6 @@ public class LoginPageActivity extends UIBase {
                                 passwordField.toString()
                                 )
                 );
-
             }
         });
 
@@ -164,7 +163,6 @@ public class LoginPageActivity extends UIBase {
     {
         super.onDestroy();
 
-        LoginObserver.ResetLoginPageReference();
+        LoginObserver.resetObserver();
     }
-
 }

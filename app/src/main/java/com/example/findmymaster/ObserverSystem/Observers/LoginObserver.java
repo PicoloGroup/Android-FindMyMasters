@@ -8,10 +8,13 @@ public class LoginObserver extends ObserverBase {
 
     private static LoginPageActivity loginPage = null;
 
+    private AppDomain.LoginState loginState;
+
 
     public LoginObserver()
     {
         super(ObserverType.LOGIN_OBSERVER);
+        loginState = AppDomain.getInstance().getLoginState();
     }
 
     @Override
@@ -19,7 +22,14 @@ public class LoginObserver extends ObserverBase {
     {
         if(loginPage != null)
         {
-
+            if(loginState.getLoginState() == true)
+            {
+                //Call success method on the login page
+            }
+            else
+            {
+                //switch depending on the error code
+            }
         }
     }
 
@@ -33,13 +43,15 @@ public class LoginObserver extends ObserverBase {
 
     }
 
-    public static void SetLoginPageReference(LoginPageActivity reference)
+    public static void activateObserver(LoginPageActivity reference)
     {
         loginPage = reference;
     }
 
-    public static void ResetLoginPageReference()
+    public static void resetObserver()
     {
         loginPage = null;
     }
+
+
 }

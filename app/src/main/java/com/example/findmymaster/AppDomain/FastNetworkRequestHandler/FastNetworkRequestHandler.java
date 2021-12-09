@@ -6,9 +6,13 @@ import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.example.findmymaster.AppDomain.AppDomain;
+import com.example.findmymaster.AppDomain.Error;
 import com.example.findmymaster.AppDomain.WebAPIHandler;
 
 import org.json.JSONObject;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 
 /*
 A network request handler implemented with fast networking library for java.
@@ -23,6 +27,19 @@ public class FastNetworkRequestHandler extends WebAPIHandler {
 
         AndroidNetworking.initialize(context);
     }
+    
+    public String encodeString(String str)
+    {
+        String result = null;
+
+        try {
+            result = URLEncoder.encode(str, "utf-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        
+        return result;
+    }
 
     @Override
     public void postLoginRequest(String email, String password) {
@@ -36,35 +53,36 @@ public class FastNetworkRequestHandler extends WebAPIHandler {
                 .getAsJSONObject(new JSONObjectRequestListener() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        AppDomain.getInstance().handleLoginResult(true);
+                        AppDomain.getInstance().handleLoginResult(null);
                     }
                     @Override
                     public void onError(ANError error) {
-                        AppDomain.getInstance().handleLoginResult(false);
+                        AppDomain.getInstance().handleLoginResult(new Error(error.getErrorCode()));
                     }
                 });
     }
 
     @Override
     public void postSignUpRequest(String email, String password) {
-
         AndroidNetworking
                 .post(super.baseURL + "auth/student/signup/")
                 .addBodyParameter("email", email)
-                .addBodyParameter("password", password)
+                .addBodyParameter("password",  password)
+
                 .setTag("test")
                 .setPriority(Priority.MEDIUM)
                 .build()
                 .getAsJSONObject(new JSONObjectRequestListener() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        AppDomain.getInstance().handleRegisterResult(true);
+                        AppDomain.getInstance().handleRegisterResult(null);
                         System.out.println(response.toString());
                     }
                     @Override
                     public void onError(ANError error) {
-                        System.out.println(error.toString());
-                        AppDomain.getInstance().handleRegisterResult(false);
+                        System.out.println(error);
+                        AppDomain.getInstance().handleRegisterResult(new Error(error.getErrorCode()));
+
                     }
                 });
     }
