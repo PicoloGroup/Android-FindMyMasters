@@ -82,7 +82,6 @@ public class FastNetworkRequestHandler extends WebAPIHandler {
                 .post(super.baseURL + "auth/student/signup/")
                 .addBodyParameter("email", email)
                 .addBodyParameter("password",  password)
-
                 .setTag("test")
                 .setPriority(Priority.MEDIUM)
                 .build()

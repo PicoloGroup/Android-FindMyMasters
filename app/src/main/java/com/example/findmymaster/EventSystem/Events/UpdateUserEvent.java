@@ -1,6 +1,8 @@
 package com.example.findmymaster.EventSystem.Events;
 
-public class UpdateUserEvent {
+import com.example.findmymaster.EventSystem.EventBase;
+
+public class UpdateUserEvent extends EventBase {
     String firstName;
     String lastName;
     String image;
@@ -9,6 +11,7 @@ public class UpdateUserEvent {
                            String lastName,
                            String image)
     {
+        super(EventType.UPDATE_USER_EVENT);
         this.firstName = firstName;
         this.lastName = lastName;
         this.image = image;
@@ -24,5 +27,10 @@ public class UpdateUserEvent {
 
     public String getImage() {
         return image;
+    }
+
+    @Override
+    public String toString() {
+        return null;
     }
 }

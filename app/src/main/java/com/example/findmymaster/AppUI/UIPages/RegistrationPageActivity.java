@@ -33,7 +33,7 @@ public class RegistrationPageActivity extends UIBase {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        RegisterObserver.setRegistrationPageReference(this);
+        RegisterObserver.activateObserver(this);
 
         setContentView(R.layout.activity_registration_page);
 
@@ -109,7 +109,7 @@ public class RegistrationPageActivity extends UIBase {
 
         super.onDestroy();
 
-        RegisterObserver.resetRegistrationPageReference();
+        RegisterObserver.resetObserver();
     }
 
 }
