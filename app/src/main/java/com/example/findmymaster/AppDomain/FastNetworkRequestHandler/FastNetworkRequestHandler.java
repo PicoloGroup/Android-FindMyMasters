@@ -88,15 +88,19 @@ public class FastNetworkRequestHandler extends WebAPIHandler {
                 .getAsJSONObject(new JSONObjectRequestListener() {
                     @Override
                     public void onResponse(JSONObject response) {
-
                         AppDomain.getInstance().handleRegisterResult(null);
                         System.out.println(response.toString());
                     }
                     @Override
                     public void onError(ANError error) {
-                        System.out.println(error);
-                        AppDomain.getInstance().handleRegisterResult(new Error(error.getErrorCode()));
-
+                        if(error.getErrorCode() == 0)
+                        {
+                            AppDomain.getInstance().handleRegisterResult(null);
+                        }
+                        else {
+                            System.out.println(error);
+                            AppDomain.getInstance().handleRegisterResult(new Error(error.getErrorCode()));
+                        }
                     }
                 });
     }

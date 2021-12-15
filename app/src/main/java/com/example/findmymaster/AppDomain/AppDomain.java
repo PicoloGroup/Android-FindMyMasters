@@ -57,7 +57,7 @@ public class AppDomain{
             loginstate = new LoginState();
             registerState = new RegisterState();
 
-            webAPIHandler = new FastNetworkRequestHandler("http://192.168.1.76:3000/", context);
+            webAPIHandler = new FastNetworkRequestHandler("http://findmymasters-api.eu-central-1.elasticbeanstalk.com/", context);
 
             layerStack = new LayerStack();
             layerStack.insertLayer(new WebAPILayer(webAPIHandler));

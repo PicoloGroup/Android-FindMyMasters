@@ -32,6 +32,12 @@ public class WebAPILayer implements LayerBase {
                 processRegisterEvent((RegisterEvent) event);
                 event.handle();
                 break;
+            case CHANGE_EMAIL_EVENT:
+                //TODO
+            case CHECK_EMAIL_EVENT:
+                //TODO
+            case CHANGE_PASSWORD_EVENT:
+                //TODO
         }
 
 

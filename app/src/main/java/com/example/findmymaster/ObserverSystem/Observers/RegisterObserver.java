@@ -21,7 +21,7 @@ public class RegisterObserver extends ObserverBase {
         {
             if(registerState.getRegisterState() == true)
             {
-                //Call success method on the regşstration page
+                //Call success method on the registration page
             }
             else
             {
