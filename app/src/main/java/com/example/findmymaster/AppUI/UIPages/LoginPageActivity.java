@@ -64,45 +64,7 @@ public class LoginPageActivity extends UIBase {
 
         actors.add(passwordField);
 
-        //Remember me Checkbox
 
-        final CheckBox rememberMeCheckBox = findViewById(R.id.LoginPage_rememberMeCheckbox);
-
-        SharedPreferences preferences = getSharedPreferences("checkbox",MODE_PRIVATE);
-        String checkbox = preferences.getString("RememberMeCheckBox","");
-        if (checkbox.equals("true")) {
-            Intent intent = new Intent(LoginPageActivity.this, RegistrationPageActivity.class);
-            startActivity(intent);
-        }
-        else if (checkbox.equals("false")){
-            Toast.makeText(this, "Please Sign in", Toast.LENGTH_SHORT).show();
-    }
-        
-        rememberMeCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                if (buttonView.isChecked()){
-                    SharedPreferences preferences = getSharedPreferences("checkbox",MODE_PRIVATE);
-                    SharedPreferences.Editor editor = preferences.edit();
-                    editor.putString("RememberMeCheckBox","true");
-                    editor.apply();
-
-                }
-                else if (!buttonView.isChecked()){
-                    SharedPreferences preferences = getSharedPreferences("checkbox",MODE_PRIVATE);
-                    SharedPreferences.Editor editor = preferences.edit();
-                    editor.putString("RememberMeCheckBox","false");
-                    editor.apply();
-                }
-            // Must be before OnCreate
-            }
-        });
-
-
-        //........
-
-        actors.add(rememberMeCheckBox);
 
         //Login button
         final Button loginButton = findViewById(R.id.LoginPage_loginButton);
@@ -110,12 +72,10 @@ public class LoginPageActivity extends UIBase {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*
-                Intent intent = new Intent(LoginPageActivity.this, RegistrationPageActivity.class);
-                startActivity(intent);
 
-                 */
+                switchIntent(LoginPageActivity.this, MainPageActivity.class);
 
+            /*
                 EditText emailField = findViewById(R.id.LoginPage_usernameField);
                 EditText passwordField = findViewById(R.id.LoginPage_loginPasswordField);
 
@@ -125,10 +85,10 @@ public class LoginPageActivity extends UIBase {
                                 passwordField.toString()
                                 )
                 );
+
+             */
             }
         });
-
-
 
         //........
 
@@ -147,8 +107,7 @@ public class LoginPageActivity extends UIBase {
         signUpLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginPageActivity.this, RegistrationPageActivity.class);
-                startActivity(intent);
+                switchIntent(LoginPageActivity.this, RegistrationPageActivity.class);
             }
         });
 

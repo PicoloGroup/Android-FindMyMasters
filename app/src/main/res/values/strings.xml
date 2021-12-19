@@ -10,7 +10,7 @@
     <string name="LoginPage_forgetPassword">Don\'t Remember Password?</string>
     <string name="LoginPage_signUpString">Sign Up</string>
     <string name="LoginPage_appIcon">AppIcon</string>
-    
+
     //REGISTRATION PAGE STRINGS
     <string name="RegistrationPage_Quote">You are in\n Masterful Hands\n Your Future\n Await!</string>
     <string name="RegistrationPage_usernameField">Enter Your User Name</string>
@@ -21,6 +21,15 @@
     <string name="RegistrationPage_haveAccount">Already Have an Account?</string>
     <string name="RegistrationPage_signInString">Sign in</string>
 
+    //MAIN PAGE STRINGS
+    <string name="MainPage_titleText">Choose</string>
+    <string name="MainPage_QuoteMessageField">The Path to Becoming Master:\n Accelerate Your Journey to Master\'s Degree and Career Advancement</string>
+    <string name="MainPage_exploreText">Explore</string>
+    <string name="MainPage_findText">Find</string>
+    <string name="MainPage_decideText">Decide</string>
+    <string name="MainPage_applyText">Apply</string>
 
+    /FIND PAGE STRINGS
+    <string name="FindPage_titleText">Find</string>
 
 </resources>
