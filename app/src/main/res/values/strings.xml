@@ -29,7 +29,22 @@
     <string name="MainPage_decideText">Decide</string>
     <string name="MainPage_applyText">Apply</string>
 
-    /FIND PAGE STRINGS
+    //FIND PAGE STRINGS
     <string name="FindPage_titleText">Find</string>
+
+    //PROGRAM DETAILS PAGE STRINGS
+    <string name="ProgramDetailsPage_programNameText">Accounting</string>
+    <string name="ProgramDetailsPage_universityNameText">Istanbul Technical University</string>
+    <string name="programDetailsPage_durationField">\t24 months</string>
+    <string name="programDetailsPage_tuitionField">\t41250 USD</string>
+    <string name="programDetailsPage_deadlineField">\t22 Aug 2019</string>
+    <string name="programDetailsPage_languageField">\tEnglish</string>
+    <string name="programDetailsPage_cityNameText">Istanbul</string>
+    <string name="programDetailsPage_countryNameText">Turkey</string>
+    <string name="ProgramDetailsPage_cityDetailsButton">See City Details</string>
+    <string name="ProgramDetailsPage_academicRequirementsText">Academic Requirements</string>
+    <string name="ProgramDetailsPage_listOfAcademicRequirementsText">*Depending on the programme and institution, you may need a 2.1 in your Bachelors\t\t\t\t\t\t\t\t\t
+        *Language proficiency\t\t\t\t\t\t\t\t\t\t\t\t\t *Professional experience Some postgraduate programmes may require you to have some professional experience</string>
+
 
 </resources>

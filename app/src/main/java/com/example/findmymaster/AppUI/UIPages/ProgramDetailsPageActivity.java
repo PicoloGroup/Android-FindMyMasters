@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.findmymaster.R;
+
 public class ProgramDetailsPageActivity extends AppCompatActivity {
 
     @Override

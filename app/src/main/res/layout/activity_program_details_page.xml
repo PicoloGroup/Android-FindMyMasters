@@ -4,6 +4,267 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorProgramDetailsPage"
     tools:context=".AppUI.UIPages.ProgramDetailsPageActivity">
+
+    <Button
+        android:id="@+id/programDetailsPage_cityDetailsButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/colorClearRed"
+        android:fontFamily="@font/roboto"
+        android:text="@string/ProgramDetailsPage_cityDetailsButton"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/ProgramDetailsPage_listOfAcademicRequirementsText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/programDetailsPage_countryNameText"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        android:background="@color/colorAccent"
+        android:fontFamily="@font/roboto"
+        android:text="@string/programDetailsPage_countryNameText"
+        android:textAlignment="center"
+        android:textColor="@color/colorTransparentBlack"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <TextView
+        android:id="@+id/programDetailsPage_cityNameText"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorAccent"
+        android:fontFamily="@font/roboto"
+        android:text="@string/programDetailsPage_cityNameText"
+        android:textAlignment="center"
+        android:textColor="@color/colorTransparentBlack"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="220dp" />
+
+    <TextView
+        android:id="@+id/programDetailsPage_languageField"
+        android:layout_width="160dp"
+        android:layout_height="25dp"
+
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="12dp"
+        android:background="@color/colorAccent"
+        android:fontFamily="@font/roboto"
+        android:importantForAutofill="no"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="@string/programDetailsPage_languageField"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="#818181"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:drawableLeftCompat="@drawable/ic_language"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.994"
+        app:layout_constraintStart_toStartOf="@+id/programDetailsPage_deadlineField"
+        app:layout_constraintTop_toBottomOf="@+id/programDetailsPage_tuitionField"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/programDetailsPage_deadlineField"
+        android:layout_width="160dp"
+        android:layout_height="25dp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/colorAccent"
+        android:fontFamily="@font/roboto"
+
+        android:importantForAutofill="no"
+
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="@string/programDetailsPage_deadlineField"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="#818181"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:drawableLeftCompat="@drawable/ic_calendar"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/programDetailsPage_durationField"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/programDetailsPage_tuitionField"
+        android:layout_width="160dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorAccent"
+        android:fontFamily="@font/roboto"
+        android:importantForAutofill="no"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="@string/programDetailsPage_tuitionField"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="#818181"
+
+        android:textSize="16sp"
+
+        android:textStyle="bold"
+        app:drawableLeftCompat="@drawable/ic_money"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="@+id/programDetailsPage_durationField"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp" />
+
+
+    <TextView
+        android:id="@+id/programDetailsPage_universityNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/ProgramDetailsPage_universityNameText"
+        android:textColor="@color/colorTransparentBlack"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ProgramDetailsPage_programNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/ProgramDetailsPage_programNameText"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/programDetailsPage_universityNameText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/programDetailsPage_durationField"
+        android:layout_width="160dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorAccent"
+        android:fontFamily="@font/roboto"
+
+        android:importantForAutofill="no"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="  24 months"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="#818181"
+
+        android:textSize="16sp"
+
+        android:textStyle="bold"
+        app:drawableLeftCompat="@drawable/ic_watch"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/ProgramDetailsPage_cityDetailsButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="64dp"
+
+        android:background="@color/colorClearRed"
+        android:fontFamily="@font/roboto"
+        android:text="@string/ProgramDetailsPage_cityDetailsButton"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="105dp" />
+
+    <TextView
+        android:id="@+id/ProgramDetailsPage_academicRequirementsText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/ProgramDetailsPage_academicRequirementsText"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/ProgramDetailsPage_cityDetailsButton" />
+
+    <TextView
+        android:id="@+id/ProgramDetailsPage_listOfAcademicRequirementsText"
+        android:layout_width="299dp"
+        android:layout_height="120dp"
+        android:text="@string/ProgramDetailsPage_listOfAcademicRequirementsText"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/ProgramDetailsPage_academicRequirementsText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
