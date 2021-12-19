@@ -14,19 +14,18 @@ import com.example.findmymaster.R;
 import java.util.ArrayList;
 
 public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.myViewHolder> {
-    private ArrayList<MasterProgramUIBox> masterProgramUIBoxList;
+    private final ArrayList<MasterProgramUIBox> masterProgramUIBoxList;
 
     public recyclerAdapter(ArrayList<MasterProgramUIBox> masterProgramUIBoxList){
         this.masterProgramUIBoxList = masterProgramUIBoxList;
     }
 
-    public class myViewHolder extends RecyclerView.ViewHolder{
-        private TextView universityName;
-        private TextView universityMajor;
+    public static class myViewHolder extends RecyclerView.ViewHolder{
+        private final TextView universityName;
+        private final TextView universityMajor;
 
         public  myViewHolder (final View view) {
             super(view);
-
             universityName = view.findViewById(R.id.Find_List_Item_University_Name);
             universityMajor = view.findViewById((R.id.Find_List_Item_University_Major));
         }

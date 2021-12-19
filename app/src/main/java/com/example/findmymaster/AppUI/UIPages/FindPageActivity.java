@@ -28,8 +28,9 @@ public class FindPageActivity extends UIBase {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_page);
-        masterProgramUIBoxList = new ArrayList<>();
         recyclerView = findViewById(R.id.findPage_RecyclerView);
+        masterProgramUIBoxList = new ArrayList<>();
+
         setMasterProgramInfo();
         setAdapter();
 
@@ -45,9 +46,9 @@ public class FindPageActivity extends UIBase {
 
     private void setMasterProgramInfo() {
         masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Computer Science"));
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Computer a"));
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Computer s"));
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Computer d"));
+        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Computer ASDFG"));
+        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Computer ZXCV"));
+        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Computer QWERT"));
         masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Computer f"));
         masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Computer g"));
         masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Computer h"));
