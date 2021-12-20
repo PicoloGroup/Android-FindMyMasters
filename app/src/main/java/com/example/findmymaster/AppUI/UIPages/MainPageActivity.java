@@ -12,7 +12,6 @@ public class MainPageActivity extends UIBase {
     private ImageButton exploreIcon;
     private ImageButton findIcon;
     private ImageButton decideIcon;
-    private ImageButton applyIcon;
 
     public MainPageActivity() {
         super(EventDispatcher.getInstance());
@@ -28,7 +27,6 @@ public class MainPageActivity extends UIBase {
         exploreIcon = findViewById(R.id.MainPage_exploreButton);
         findIcon = findViewById(R.id.MainPage_findButton);
         decideIcon = findViewById(R.id.MainPage_decideButton);
-        applyIcon = findViewById(R.id.MainPage_applyButton);
         initialize();
 
 
@@ -49,12 +47,6 @@ public class MainPageActivity extends UIBase {
             }
         });
         decideIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //switchIntent();
-            }
-        });
-        applyIcon.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //switchIntent();

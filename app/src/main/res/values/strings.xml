@@ -45,6 +45,7 @@
     <string name="ProgramDetailsPage_academicRequirementsText">Academic Requirements</string>
     <string name="ProgramDetailsPage_listOfAcademicRequirementsText">*Depending on the programme and institution, you may need a 2.1 in your Bachelors\t\t\t\t\t\t\t\t\t
         *Language proficiency\t\t\t\t\t\t\t\t\t\t\t\t\t *Professional experience Some postgraduate programmes may require you to have some professional experience</string>
+    <string name="programDetailsPage_applyButton"> Quick Apply</string>
 
 
 </resources>

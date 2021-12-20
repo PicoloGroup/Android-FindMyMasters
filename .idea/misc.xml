@@ -23,7 +23,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/Android-FindMyMasters/app/src/main/res/layout/activity_find_page.xml" value="0.2" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Android-FindMyMasters/app/src/main/res/layout/activity_login_page.xml" value="0.2866847826086957" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Android-FindMyMasters/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Android-FindMyMasters/app/src/main/res/layout/activity_main_page.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Android-FindMyMasters/app/src/main/res/layout/activity_main_page.xml" value="0.33" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Android-FindMyMasters/app/src/main/res/layout/activity_program_details_page.xml" value="0.33" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Android-FindMyMasters/app/src/main/res/layout/activity_registration_page.xml" value="0.33" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Android-FindMyMasters/app/src/main/res/layout/appbar.xml" value="0.20677083333333332" />
@@ -48,7 +48,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.36666666666666664" />
+        <option name="scale" value="0.22" />
       </ProjectState>
     </option>
   </component>

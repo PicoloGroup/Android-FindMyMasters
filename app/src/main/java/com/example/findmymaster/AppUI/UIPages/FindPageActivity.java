@@ -15,7 +15,7 @@ import com.example.findmymaster.R;
 
 import java.util.ArrayList;
 
-public class FindPageActivity extends UIBase {
+public class FindPageActivity extends UIBase implements recyclerAdapter.OnMasterProgramListener {
 
     public FindPageActivity() {
         super(EventDispatcher.getInstance());
@@ -37,7 +37,7 @@ public class FindPageActivity extends UIBase {
     }
 
     private void setAdapter() {
-        recyclerAdapter adapter = new recyclerAdapter(masterProgramUIBoxList);
+        recyclerAdapter adapter = new recyclerAdapter(masterProgramUIBoxList,this);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -46,16 +46,27 @@ public class FindPageActivity extends UIBase {
 
     private void setMasterProgramInfo() {
         masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Computer Science"));
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Computer ASDFG"));
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Computer ZXCV"));
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Computer QWERT"));
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Computer f"));
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Computer g"));
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Computer h"));
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Computer j"));
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Computer k"));
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Computer l"));
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Computer a"));
+        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Economics"));
+        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Electronic Engineering"));
+        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Finance"));
+        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Law"));
+        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Topology"));
+        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","History"));
+        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Astrophysics"));
+        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Literature"));
+        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Medicine"));
+        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Chemistry"));
+        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Physiology"));
+        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Data Engineering"));
+        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Artificial Intelligence"));
+        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Signal Processing"));
+    }
 
+    @Override
+    public void onMasterProgramClick(int position) {
+        MasterProgramUIBox element = masterProgramUIBoxList.get(position);
+        ProgramDetailsPageActivity.setUniversityNameString(element.getUniversityName());
+        ProgramDetailsPageActivity.setProgramNameString(element.getFieldOfStudy());
+        switchIntent(FindPageActivity.this,ProgramDetailsPageActivity.class);
     }
 }

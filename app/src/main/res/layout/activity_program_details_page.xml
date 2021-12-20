@@ -8,7 +8,7 @@
     tools:context=".AppUI.UIPages.ProgramDetailsPageActivity">
 
     <Button
-        android:id="@+id/programDetailsPage_cityDetailsButton"
+        android:id="@+id/programDetailsPage_applyButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -16,7 +16,8 @@
         android:layout_marginEnd="32dp"
         android:background="@color/colorClearRed"
         android:fontFamily="@font/roboto"
-        android:text="@string/ProgramDetailsPage_cityDetailsButton"
+        android:text="@string/programDetailsPage_applyButton"
+        android:drawableBottom="@drawable/ic_apply"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/colorAccent"
@@ -157,7 +158,7 @@
 
 
     <TextView
-        android:id="@+id/programDetailsPage_universityNameText"
+        android:id="@+id/ProgramDetailsPage_universityNameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -184,7 +185,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintHorizontal_bias="0.017"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@+id/programDetailsPage_universityNameText"
+        app:layout_constraintTop_toBottomOf="@+id/ProgramDetailsPage_universityNameText"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView

@@ -13,30 +13,45 @@ import com.example.findmymaster.R;
 
 import java.util.ArrayList;
 
-public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.myViewHolder> {
+public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.myViewHolder>  {
     private final ArrayList<MasterProgramUIBox> masterProgramUIBoxList;
+    private OnMasterProgramListener mOnmasterProgramListener;
 
-    public recyclerAdapter(ArrayList<MasterProgramUIBox> masterProgramUIBoxList){
+    public recyclerAdapter(ArrayList<MasterProgramUIBox> masterProgramUIBoxList, OnMasterProgramListener mOnmasterProgramListener){
         this.masterProgramUIBoxList = masterProgramUIBoxList;
+        this.mOnmasterProgramListener = mOnmasterProgramListener;
     }
 
-    public static class myViewHolder extends RecyclerView.ViewHolder{
+    public static class myViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         private final TextView universityName;
         private final TextView universityMajor;
 
-        public  myViewHolder (final View view) {
+        private OnMasterProgramListener onMasterProgramListener;
+
+
+        public  myViewHolder (final View view, OnMasterProgramListener onMasterProgramListener) {
             super(view);
             universityName = view.findViewById(R.id.Find_List_Item_University_Name);
             universityMajor = view.findViewById((R.id.Find_List_Item_University_Major));
+            this.onMasterProgramListener = onMasterProgramListener;
+            view.setOnClickListener(this);
         }
 
+        @Override
+        public void onClick(View v) {
+            onMasterProgramListener.onMasterProgramClick(getAdapterPosition());
+        }
+    }
+
+    public interface OnMasterProgramListener{
+        void onMasterProgramClick(int position);
     }
 
     @NonNull
     @Override
     public recyclerAdapter.myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.find_list_items,parent,false);
-        return new myViewHolder(itemView);
+        return new myViewHolder(itemView,mOnmasterProgramListener);
     }
 
     @Override
