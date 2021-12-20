@@ -32,7 +32,6 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.myView
 
     }
 
-
     @NonNull
     @Override
     public recyclerAdapter.myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
