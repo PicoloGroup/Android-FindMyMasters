@@ -8,6 +8,11 @@
     android:background="@color/colorMainBackground"
     tools:context=".AppUI.UIPages.MainPageActivity">
 
+    <FrameLayout
+        android:id="@+id/MainPage_fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_top"
@@ -59,7 +64,6 @@
             android:textColor="@color/colorHint"
             android:drawableTop="@drawable/ic_compare"
             android:layout_marginTop="8dp"
-
             android:text="DECIDE" />
 
     </LinearLayout>

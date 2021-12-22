@@ -14,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
+            android:name=".AppUI.Fragment.ExploreFragment"
+            android:exported="false" />
+        <activity
+            android:name=".AppUI.Fragment.DecideFragment"
+            android:exported="false" />
+        <activity
             android:name=".AppUI.UIPages.ApplyPageActivity"
             android:exported="false" />
         <activity

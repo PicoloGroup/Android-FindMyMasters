@@ -1,43 +1,54 @@
-package com.example.findmymaster.AppUI.UIPages;
+package com.example.findmymaster.AppUI.Fragment;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-
 import com.example.findmymaster.AppUI.MasterProgramUIBox;
-import com.example.findmymaster.AppUI.UIBase;
+import com.example.findmymaster.AppUI.UIPages.ProgramDetailsPageActivity;
 import com.example.findmymaster.AppUI.recyclerAdapter;
-import com.example.findmymaster.EventSystem.EventDispatcher;
 import com.example.findmymaster.R;
+
 import java.util.ArrayList;
 
-public class FindPageActivity extends UIBase implements recyclerAdapter.OnMasterProgramListener {
-
-    public FindPageActivity() {
-        super(EventDispatcher.getInstance());
-    };
+public class FindFragment extends Fragment implements recyclerAdapter.OnMasterProgramListener {
 
     private ArrayList<MasterProgramUIBox> masterProgramUIBoxList;
     private RecyclerView recyclerView;
+    private Context mainPageContext;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_find_page);
-        recyclerView = findViewById(R.id.findPage_RecyclerView);
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        recyclerView = view.findViewById(R.id.findPage_RecyclerView);
         masterProgramUIBoxList = new ArrayList<>();
+        mainPageContext = view.getContext();
 
         setMasterProgramInfo();
         setAdapter();
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.activity_find_fragment,container,false);
+        return rootView;
 
     }
 
     private void setAdapter() {
         recyclerAdapter adapter = new recyclerAdapter(masterProgramUIBoxList,this);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(mainPageContext);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(adapter);
@@ -66,6 +77,11 @@ public class FindPageActivity extends UIBase implements recyclerAdapter.OnMaster
         MasterProgramUIBox element = masterProgramUIBoxList.get(position);
         ProgramDetailsPageActivity.setUniversityNameString(element.getUniversityName());
         ProgramDetailsPageActivity.setProgramNameString(element.getFieldOfStudy());
-        switchIntent(FindPageActivity.this,ProgramDetailsPageActivity.class);
+        switchIntent(mainPageContext,ProgramDetailsPageActivity.class);
+    }
+
+    public void switchIntent(android.content.Context context, Class<?> target){
+        Intent intent = new Intent(context, target);
+        startActivity(intent);
     }
 }
