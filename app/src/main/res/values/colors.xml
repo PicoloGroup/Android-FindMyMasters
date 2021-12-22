@@ -3,7 +3,7 @@
     <color name="colorPrimary">#9C0000</color>
     <color name="colorPrimaryDark">#131313</color>
     <color name="colorAccent">#F3F4F5</color>
-    <color name="colorProgramDetailsPage">#f2f2f7</color>
+    <color name="colorMainBackground">#f2f2f7</color>
     <color name="colorTransparentBlack">#4d4d4d</color>
     <color name="loginBlack">#1E1F1B</color>
     <color name="login_form_details">#ccffffff</color>

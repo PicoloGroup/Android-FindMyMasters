@@ -35,10 +35,10 @@
     //PROGRAM DETAILS PAGE STRINGS
     <string name="ProgramDetailsPage_programNameText">Accounting</string>
     <string name="ProgramDetailsPage_universityNameText">Istanbul Technical University</string>
-    <string name="programDetailsPage_durationField">\t24 months</string>
-    <string name="programDetailsPage_tuitionField">\t41250 USD</string>
-    <string name="programDetailsPage_deadlineField">\t22 Aug 2019</string>
-    <string name="programDetailsPage_languageField">\tEnglish</string>
+    <string name="programDetailsPage_durationField">24 months</string>
+    <string name="programDetailsPage_tuitionField">41250 USD</string>
+    <string name="programDetailsPage_deadlineField">22 Aug 2019</string>
+    <string name="programDetailsPage_languageField">English</string>
     <string name="programDetailsPage_cityNameText">Istanbul</string>
     <string name="programDetailsPage_countryNameText">Turkey</string>
     <string name="ProgramDetailsPage_cityDetailsButton">See City Details</string>
