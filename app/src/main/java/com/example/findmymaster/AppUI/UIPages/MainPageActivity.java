@@ -9,9 +9,6 @@ import com.example.findmymaster.R;
 
 public class MainPageActivity extends UIBase {
 
-    private ImageButton exploreIcon;
-    private ImageButton findIcon;
-    private ImageButton decideIcon;
 
     public MainPageActivity() {
         super(EventDispatcher.getInstance());
@@ -24,33 +21,7 @@ public class MainPageActivity extends UIBase {
         setContentView(R.layout.activity_main_page);
 
         //hooks
-        exploreIcon = findViewById(R.id.MainPage_exploreButton);
-        findIcon = findViewById(R.id.MainPage_findButton);
-        decideIcon = findViewById(R.id.MainPage_decideButton);
-        initialize();
 
 
-    }
-    private void initialize(){
-
-        exploreIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               // switchIntent();
-            }
-        });
-
-        findIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                switchIntent(MainPageActivity.this,FindPageActivity.class);
-            }
-        });
-        decideIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //switchIntent();
-            }
-        });
     }
 }
