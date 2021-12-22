@@ -16,6 +16,7 @@ public class ProgramDetailsPageActivity extends UIBase {
     private TextView universityName;
     private TextView programName;
     private Button seeCityDetailsButton;
+    private Button applyButton;
     private static String universityNameString;
     private static String programNameString;
 
@@ -32,6 +33,7 @@ public class ProgramDetailsPageActivity extends UIBase {
         universityName = findViewById(R.id.ProgramDetailsPage_universityNameText);
         programName = findViewById(R.id.ProgramDetailsPage_programNameText);
         seeCityDetailsButton = findViewById(R.id.ProgramDetailsPage_cityDetailsButton);
+        applyButton = findViewById(R.id.ProgramDetailsPage_applyButton);
 
         universityName.setText(universityNameString);
         programName.setText(programNameString);
@@ -46,6 +48,12 @@ public class ProgramDetailsPageActivity extends UIBase {
             }
         });
 
+        applyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switchIntent(ProgramDetailsPageActivity.this,ApplyPageActivity.class);
+            }
+        });
 
     }
 
