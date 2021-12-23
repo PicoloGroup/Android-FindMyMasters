@@ -14,16 +14,9 @@ public class MasterProgramFindUIBox {
         return UniversityName;
     }
 
-    public void setUniversityName(String universityName) {
-        UniversityName = universityName;
-    }
-
     public String getFieldOfStudy() {
         return FieldOfStudy;
     }
 
-    public void setFieldOfStudy(String fieldOfStudy) {
-        FieldOfStudy = fieldOfStudy;
-    }
 }
 

@@ -10,10 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.findmymaster.AppUI.recyclerAdapter;
+import com.example.findmymaster.AppUI.Adapter.RecyclerFindAdapter;
 import com.example.findmymaster.R;
 
-public class ExploreFragment extends Fragment implements recyclerAdapter.OnMasterProgramListener {
+public class ExploreFragment extends Fragment implements RecyclerFindAdapter.OnMasterProgramListener {
 
     RecyclerView recyclerView;
 

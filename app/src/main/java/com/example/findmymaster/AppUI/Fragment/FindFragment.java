@@ -16,12 +16,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.findmymaster.AppUI.MasterProgramFindUIBox;
 import com.example.findmymaster.AppUI.UIPages.ProgramDetailsPageActivity;
-import com.example.findmymaster.AppUI.recyclerAdapter;
+import com.example.findmymaster.AppUI.Adapter.RecyclerFindAdapter;
 import com.example.findmymaster.R;
 
 import java.util.ArrayList;
 
-public class FindFragment extends Fragment implements recyclerAdapter.OnMasterProgramListener {
+public class FindFragment extends Fragment implements RecyclerFindAdapter.OnMasterProgramListener {
 
     private ArrayList<MasterProgramFindUIBox> masterProgramFindUIBoxList;
     private RecyclerView recyclerView;
@@ -47,7 +47,7 @@ public class FindFragment extends Fragment implements recyclerAdapter.OnMasterPr
     }
 
     private void setAdapter() {
-        recyclerAdapter adapter = new recyclerAdapter(masterProgramFindUIBoxList,this);
+        RecyclerFindAdapter adapter = new RecyclerFindAdapter(masterProgramFindUIBoxList,this);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(mainPageContext);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());

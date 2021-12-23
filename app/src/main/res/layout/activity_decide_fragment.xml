@@ -31,10 +31,10 @@
         tools:ignore="MissingConstraints" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/ExploreFragment_recyclerView"
+        android:id="@+id/DecideFragment_recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorMainBackground"/>
 
+        android:background="@color/colorMainBackground"/>
 
 </LinearLayout>
