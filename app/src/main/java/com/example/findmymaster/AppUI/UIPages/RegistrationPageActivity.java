@@ -93,8 +93,7 @@ public class RegistrationPageActivity extends UIBase {
         signInLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RegistrationPageActivity.this, LoginPageActivity.class);
-                startActivity(intent);
+                switchIntent(RegistrationPageActivity.this, LoginPageActivity.class);
             }
 
         });
