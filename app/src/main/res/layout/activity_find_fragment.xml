@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorAccent"
-    tools:context=".AppUI.UIPages.FindPageActivity">
+    tools:context=".AppUI.Fragment.FindFragment">
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -67,7 +67,7 @@
         app:layout_constraintVertical_bias="0.352" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/findPage_RecyclerView"
+        android:id="@+id/findFragment_RecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"

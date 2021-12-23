@@ -1,6 +1,5 @@
 package com.example.findmymaster.AppUI;
 
-import android.content.ClipData;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,11 +13,11 @@ import com.example.findmymaster.R;
 import java.util.ArrayList;
 
 public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.myViewHolder>  {
-    private final ArrayList<MasterProgramUIBox> masterProgramUIBoxList;
+    private final ArrayList<MasterProgramFindUIBox> masterProgramFindUIBoxList;
     private OnMasterProgramListener mOnmasterProgramListener;
 
-    public recyclerAdapter(ArrayList<MasterProgramUIBox> masterProgramUIBoxList, OnMasterProgramListener mOnmasterProgramListener){
-        this.masterProgramUIBoxList = masterProgramUIBoxList;
+    public recyclerAdapter(ArrayList<MasterProgramFindUIBox> masterProgramFindUIBoxList, OnMasterProgramListener mOnmasterProgramListener){
+        this.masterProgramFindUIBoxList = masterProgramFindUIBoxList;
         this.mOnmasterProgramListener = mOnmasterProgramListener;
     }
 
@@ -57,8 +56,8 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.myView
     @Override
     public void onBindViewHolder(@NonNull recyclerAdapter.myViewHolder holder, int position) {
 
-        String universityName = masterProgramUIBoxList.get(position).getUniversityName();
-        String majorName = masterProgramUIBoxList.get(position).getFieldOfStudy();
+        String universityName = masterProgramFindUIBoxList.get(position).getUniversityName();
+        String majorName = masterProgramFindUIBoxList.get(position).getFieldOfStudy();
 
         holder.universityName.setText(universityName);
         holder.universityMajor.setText(majorName);
@@ -67,6 +66,6 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.myView
 
     @Override
     public int getItemCount() {
-        return masterProgramUIBoxList.size();
+        return masterProgramFindUIBoxList.size();
     }
 }

@@ -12,4 +12,5 @@
     <color name="colorClearRed">#FFC31D1D</color>
     <color name="colorClearWhite">#ffffff</color>
     <color name="colorHint">#818181</color>
+    <color name="colorSearchBar">#ad444e</color>
 </resources>

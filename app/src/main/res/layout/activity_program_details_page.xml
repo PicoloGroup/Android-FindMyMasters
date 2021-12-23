@@ -129,9 +129,7 @@
         android:text="@string/programDetailsPage_tuitionField"
         android:textColor="@color/colorPrimaryDark"
         android:textColorHint="#818181"
-
         android:textSize="16sp"
-
         android:textStyle="bold"
         app:drawableLeftCompat="@drawable/ic_money"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"

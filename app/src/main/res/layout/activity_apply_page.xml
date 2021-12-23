@@ -15,10 +15,10 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="12dp"
-        android:textColor="@color/colorPrimaryDark"
         android:text="APPLY"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="28sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <View
         android:id="@+id/footer_line"

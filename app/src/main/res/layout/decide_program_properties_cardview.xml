@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/rounded_corner">
+
+        <ImageView
+            android:id="@+id/cardViewImage1"
+            android:layout_width="98dp"
+            android:layout_height="97dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="103dp"
+            android:layout_marginEnd="312dp"
+            android:layout_marginBottom="0dp"
+            app:srcCompat="@drawable/ic_university" />
+
+        <TextView
+            android:id="@+id/DecideCardView_programDurationValue"
+            android:layout_width="160dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/DecideCardView_programRankingValue"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="105dp"
+            android:background="@drawable/main_background_rounded_color"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/roboto"
+            android:importantForAutofill="no"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="2dp"
+            android:text="24 months"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHint="#818181"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:drawableLeftCompat="@drawable/ic_watch_grey" />
+
+        <TextView
+            android:id="@+id/DecideCardView_programCostValue"
+            android:layout_width="160dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/DecideCardView_programDurationValue"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="105dp"
+            android:background="@drawable/main_background_rounded_color"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/roboto"
+            android:importantForAutofill="no"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="2dp"
+            android:text="41250"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHint="#818181"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:drawableLeftCompat="@drawable/ic_money_grey" />
+
+        <TextView
+            android:id="@+id/DecideCardView_programLanguageValue"
+            android:layout_width="160dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/DecideCardView_programCostValue"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="105dp"
+            android:background="@drawable/main_background_rounded_color"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/roboto"
+            android:importantForAutofill="no"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="2dp"
+            android:text="English"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHint="#818181"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:drawableLeftCompat="@drawable/ic_language_grey" />
+
+        <TextView
+            android:id="@+id/DecideCardView_programRankingValue"
+            android:layout_width="160dp"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="105dp"
+            android:background="@drawable/main_background_rounded_color"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/roboto"
+            android:importantForAutofill="no"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="2dp"
+            android:text="#1"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHint="#818181"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:drawableLeftCompat="@drawable/ic_star_grey" />
+
+        <Button
+            android:id="@+id/DecideCardView_disableButton"
+            android:layout_width="60dp"
+            android:layout_height="26dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/main_background_rounded_color"
+            app:drawableBottomCompat="@drawable/ic_close_grey" />
+
+        <TextView
+            android:id="@+id/DecideCardView_programCountryNameValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/main_background_rounded_color"
+            android:text="TextView"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/DecideCardView_universityNameValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/DecideCardView_programCountryNameValue"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/main_background_rounded_color"
+            android:text="TextView"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/DecideCardView_programNameValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/DecideCardView_universityNameValue"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/main_background_rounded_color"
+            android:text="TextView"
+            android:textColor="@color/colorPrimaryDark" />
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

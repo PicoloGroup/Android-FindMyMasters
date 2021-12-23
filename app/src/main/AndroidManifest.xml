@@ -29,9 +29,6 @@
             android:name=".AppUI.UIPages.ProgramDetailsPageActivity"
             android:exported="false" />
         <activity
-            android:name=".AppUI.UIPages.FindPageActivity"
-            android:exported="false" />
-        <activity
             android:name=".AppUI.UIPages.MainPageActivity"
             android:exported="false" />
         <activity

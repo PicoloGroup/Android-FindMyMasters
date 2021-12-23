@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.findmymaster.AppUI.MasterProgramUIBox;
+import com.example.findmymaster.AppUI.MasterProgramFindUIBox;
 import com.example.findmymaster.AppUI.UIPages.ProgramDetailsPageActivity;
 import com.example.findmymaster.AppUI.recyclerAdapter;
 import com.example.findmymaster.R;
@@ -23,15 +23,15 @@ import java.util.ArrayList;
 
 public class FindFragment extends Fragment implements recyclerAdapter.OnMasterProgramListener {
 
-    private ArrayList<MasterProgramUIBox> masterProgramUIBoxList;
+    private ArrayList<MasterProgramFindUIBox> masterProgramFindUIBoxList;
     private RecyclerView recyclerView;
     private Context mainPageContext;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        recyclerView = view.findViewById(R.id.findPage_RecyclerView);
-        masterProgramUIBoxList = new ArrayList<>();
+        recyclerView = view.findViewById(R.id.findFragment_RecyclerView);
+        masterProgramFindUIBoxList = new ArrayList<>();
         mainPageContext = view.getContext();
 
         setMasterProgramInfo();
@@ -47,7 +47,7 @@ public class FindFragment extends Fragment implements recyclerAdapter.OnMasterPr
     }
 
     private void setAdapter() {
-        recyclerAdapter adapter = new recyclerAdapter(masterProgramUIBoxList,this);
+        recyclerAdapter adapter = new recyclerAdapter(masterProgramFindUIBoxList,this);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(mainPageContext);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -55,26 +55,26 @@ public class FindFragment extends Fragment implements recyclerAdapter.OnMasterPr
     }
 
     private void setMasterProgramInfo() {
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Computer Science"));
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Economics"));
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Electronic Engineering"));
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Finance"));
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Law"));
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Topology"));
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","History"));
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Astrophysics"));
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Literature"));
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Medicine"));
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Chemistry"));
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Physiology"));
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Data Engineering"));
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Artificial Intelligence"));
-        masterProgramUIBoxList.add(new MasterProgramUIBox("Koc University","Signal Processing"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Computer Science"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Economics"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Electronic Engineering"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Finance"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Law"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Topology"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","History"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Astrophysics"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Literature"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Medicine"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Chemistry"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Physiology"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Data Engineering"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Artificial Intelligence"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Signal Processing"));
     }
 
     @Override
     public void onMasterProgramClick(int position) {
-        MasterProgramUIBox element = masterProgramUIBoxList.get(position);
+        MasterProgramFindUIBox element = masterProgramFindUIBoxList.get(position);
         ProgramDetailsPageActivity.setUniversityNameString(element.getUniversityName());
         ProgramDetailsPageActivity.setProgramNameString(element.getFieldOfStudy());
         switchIntent(mainPageContext,ProgramDetailsPageActivity.class);
