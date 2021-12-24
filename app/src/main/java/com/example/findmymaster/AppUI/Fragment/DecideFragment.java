@@ -53,11 +53,11 @@ public class DecideFragment extends Fragment implements RecyclerDecideAdapter.On
     }
 
     private void setMasterProgramInfo() {
-        MasterProgramDecideUIBoxList.add(new MasterProgramDecideUIBox("Turkey", "Koc University", "Physics",
-                "#1","20000$","2 years","English"));
+        MasterProgramDecideUIBoxList.add(new MasterProgramDecideUIBox("USA", "Yale University", "Robotics",
+                "#12","45000$","2 years","English"));
 
-        MasterProgramDecideUIBoxList.add(new MasterProgramDecideUIBox("Turkey", "ITU", "Physics",
-                "#2","Free","2 years","English"));
+        MasterProgramDecideUIBoxList.add(new MasterProgramDecideUIBox("Turkey", "Koc University", "Robotics",
+                "#74","27850$","2 years","English"));
     }
 
     @Override

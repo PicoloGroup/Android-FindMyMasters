@@ -56,20 +56,20 @@ public class FindFragment extends Fragment implements RecyclerFindAdapter.OnMast
 
     private void setMasterProgramInfo() {
         masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Computer Science"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Economics"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Electronic Engineering"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Finance"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Law"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Topology"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","History"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Astrophysics"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Literature"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Medicine"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Chemistry"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Physiology"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Data Engineering"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Artificial Intelligence"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Signal Processing"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("University of Oxford","Economics"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("London Business School","Financial Economics"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Istanbul Technical University","Computer Vision"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Bogazici University","Artificial Intelligence"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Middle East Technical University","Cyber Security"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Stanford University","Data Science for Decision Making"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Yale University","Digital Business"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Harvard University","Big Data Management"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Stanford University","Machine Learning"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Yale University","Data Analytics"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Harvard University","Game Design"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Princeton University","Data Engineering"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Data Analytics"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("University of California","Signal Processing"));
     }
 
     @Override
