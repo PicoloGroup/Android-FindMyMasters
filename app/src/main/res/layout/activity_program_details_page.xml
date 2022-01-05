@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorProgramDetailsPage"
+    android:background="@color/colorMainBackground"
     tools:context=".AppUI.UIPages.ProgramDetailsPageActivity">
 
     <Button
-        android:id="@+id/programDetailsPage_cityDetailsButton"
+        android:id="@+id/ProgramDetailsPage_applyButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="40dp"
         android:layout_marginEnd="32dp"
-        android:background="@color/colorClearRed"
+        android:background="@drawable/red_rounded_corner"
+        android:drawableBottom="@drawable/ic_apply"
         android:fontFamily="@font/roboto"
-        android:text="@string/ProgramDetailsPage_cityDetailsButton"
+        android:text="@string/programDetailsPage_applyButton"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/colorAccent"
@@ -24,10 +24,31 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@+id/ProgramDetailsPage_listOfAcademicRequirementsText"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/ProgramDetailsPage_selectButton"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <Button
+        android:id="@+id/ProgramDetailsPage_selectButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="164dp"
+        android:background="@drawable/red_rounded_corner"
+        android:drawableBottom="@drawable/ic_select"
+        android:fontFamily="@font/roboto"
+        android:text="Select"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left" />
 
     <TextView
         android:id="@+id/programDetailsPage_countryNameText"
@@ -35,14 +56,16 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="12dp"
-        android:background="@color/colorAccent"
+        android:paddingHorizontal="16dp"
+        android:background="@drawable/rounded_corner"
         android:fontFamily="@font/roboto"
         android:text="@string/programDetailsPage_countryNameText"
-        android:textAlignment="center"
         android:textColor="@color/colorTransparentBlack"
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
-        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+        android:drawablePadding="8dp"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:drawableStartCompat="@drawable/ic_country" />
 
     <TextView
         android:id="@+id/programDetailsPage_cityNameText"
@@ -50,34 +73,38 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:background="@color/colorAccent"
+        android:paddingHorizontal="16dp"
+        android:drawablePadding="8dp"
+        android:background="@drawable/rounded_corner"
         android:fontFamily="@font/roboto"
         android:text="@string/programDetailsPage_cityNameText"
-        android:textAlignment="center"
         android:textColor="@color/colorTransparentBlack"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:drawableStartCompat="@drawable/ic_location"
+
+        />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="220dp" />
+        app:layout_constraintGuide_begin="221dp" />
 
     <TextView
         android:id="@+id/programDetailsPage_languageField"
         android:layout_width="160dp"
-        android:layout_height="25dp"
-
+        android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="12dp"
-        android:background="@color/colorAccent"
+        android:background="@drawable/rounded_corner"
         android:fontFamily="@font/roboto"
         android:importantForAutofill="no"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="2dp"
+        android:drawablePadding="8dp"
         android:text="@string/programDetailsPage_languageField"
         android:textColor="@color/colorPrimaryDark"
         android:textColorHint="#818181"
@@ -94,17 +121,15 @@
     <TextView
         android:id="@+id/programDetailsPage_deadlineField"
         android:layout_width="160dp"
-        android:layout_height="25dp"
-
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:background="@color/colorAccent"
+        android:background="@drawable/rounded_corner"
         android:fontFamily="@font/roboto"
-
         android:importantForAutofill="no"
-
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="2dp"
+        android:drawablePadding="8dp"
         android:text="@string/programDetailsPage_deadlineField"
         android:textColor="@color/colorPrimaryDark"
         android:textColorHint="#818181"
@@ -119,19 +144,18 @@
     <TextView
         android:id="@+id/programDetailsPage_tuitionField"
         android:layout_width="160dp"
-        android:layout_height="25dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="@color/colorAccent"
+        android:background="@drawable/rounded_corner"
         android:fontFamily="@font/roboto"
         android:importantForAutofill="no"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="2dp"
+        android:drawablePadding="8dp"
         android:text="@string/programDetailsPage_tuitionField"
         android:textColor="@color/colorPrimaryDark"
         android:textColorHint="#818181"
-
         android:textSize="16sp"
-
         android:textStyle="bold"
         app:drawableLeftCompat="@drawable/ic_money"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
@@ -146,28 +170,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="24dp" />
+        app:layout_constraintGuide_begin="16dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="24dp" />
+        app:layout_constraintGuide_end="16dp" />
 
 
     <TextView
-        android:id="@+id/programDetailsPage_universityNameText"
+        android:id="@+id/ProgramDetailsPage_universityNameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/ProgramDetailsPage_universityNameText"
+        android:layout_marginTop="16dp"
+
+        android:text="Koc University"
         android:textColor="@color/colorTransparentBlack"
         android:textSize="20sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
-        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -177,34 +202,32 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="@string/ProgramDetailsPage_programNameText"
+        android:text="Robotics"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
-        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@+id/programDetailsPage_universityNameText"
+        app:layout_constraintTop_toBottomOf="@+id/ProgramDetailsPage_universityNameText"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/programDetailsPage_durationField"
         android:layout_width="160dp"
-        android:layout_height="25dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
-        android:background="@color/colorAccent"
+        android:background="@drawable/rounded_corner"
         android:fontFamily="@font/roboto"
-
         android:importantForAutofill="no"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:text="  24 months"
+        android:paddingVertical="2dp"
+        android:paddingHorizontal="16dp"
+        android:drawablePadding="8dp"
+        android:text="@string/programDetailsPage_durationField"
         android:textColor="@color/colorPrimaryDark"
         android:textColorHint="#818181"
-
         android:textSize="16sp"
-
         android:textStyle="bold"
         app:drawableLeftCompat="@drawable/ic_watch"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
@@ -219,8 +242,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginTop="64dp"
-
-        android:background="@color/colorClearRed"
+        android:background="@drawable/red_rounded_corner"
         android:fontFamily="@font/roboto"
         android:text="@string/ProgramDetailsPage_cityDetailsButton"
         android:textAlignment="center"
@@ -238,7 +260,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="105dp" />
+        app:layout_constraintGuide_begin="112dp" />
 
     <TextView
         android:id="@+id/ProgramDetailsPage_academicRequirementsText"
@@ -261,10 +283,23 @@
         android:id="@+id/ProgramDetailsPage_listOfAcademicRequirementsText"
         android:layout_width="299dp"
         android:layout_height="120dp"
+        android:layout_marginTop="4dp"
         android:text="@string/ProgramDetailsPage_listOfAcademicRequirementsText"
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/ProgramDetailsPage_academicRequirementsText" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="100dp"
+        android:background="@color/colorClearRed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

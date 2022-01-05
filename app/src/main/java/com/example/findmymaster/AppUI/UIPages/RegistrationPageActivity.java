@@ -82,6 +82,7 @@ public class RegistrationPageActivity extends UIBase {
                                 passwordField.getText().toString()
                                 )
                         );
+                switchIntent(RegistrationPageActivity.this,LoginPageActivity.class);
             }
         });
 

@@ -5,219 +5,80 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:focusable="true"
-    android:background="@color/colorAccent"
+    android:background="@color/colorMainBackground"
     tools:context=".AppUI.UIPages.MainPageActivity">
 
+    <FrameLayout
+        android:id="@+id/MainPage_fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_left"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="24dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_right"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="24dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="620dp" />
+        app:layout_constraintGuide_end="80dp" />
 
-    <include
-        android:id="@+id/include"
-        layout="@layout/appbar"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:background="@color/colorClearWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <ImageButton
-        android:id="@+id/MainPage_exploreButton"
-        android:layout_width="80dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="16dp"
-        android:clickable="true"
-        android:contentDescription="Navigate to Explore Page"
-        android:focusable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toTopOf="@+id/guideline_top"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_explore"
-        app:tint="@color/colorPrimary" />
+        app:layout_constraintVertical_bias="1.0">
 
-    <ImageButton
-        android:id="@+id/MainPage_findButton"
-        android:layout_width="80dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="8dp"
-        android:clickable="true"
-        android:contentDescription="Navigate to Find Page"
-        android:focusable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/MainPage_exploreButton"
-        app:layout_constraintTop_toTopOf="@+id/guideline_top"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_find"
-        app:tint="@color/colorPrimary" />
+        <Button
+            android:id="@+id/MainPage_exploreButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorClearWhite"
+            android:textColor="@color/colorHint"
+            android:text="@string/MainPage_exploreText"
+            android:layout_marginTop="8dp"
+            android:drawableTop="@drawable/ic_explore"/>
 
-    <ImageButton
-        android:id="@+id/MainPage_decideButton"
-        android:layout_width="80dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="16dp"
-        android:clickable="true"
-        android:contentDescription="Navigate to Decide Page"
-        android:focusable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/MainPage_findButton"
-        app:layout_constraintTop_toTopOf="@+id/guideline_top"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_decide"
-        app:tint="@color/colorPrimary" />
+        <Button
+            android:id="@+id/MainPage_findButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorClearWhite"
+            android:textColor="@color/colorHint"
+            android:drawableTop="@drawable/ic_find"
+            android:layout_marginTop="8dp"
+            android:text="FIND" />
 
-    <ImageButton
-        android:id="@+id/MainPage_applyButton"
-        android:layout_width="80dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="8dp"
-        android:clickable="true"
-        android:contentDescription="Navigate to Apply Page"
-        android:focusable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/MainPage_decideButton"
-        app:layout_constraintTop_toTopOf="@+id/guideline_top"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_apply"
-        app:tint="@color/colorPrimary" />
+        <Button
+            android:id="@+id/MainPage_decideButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorClearWhite"
+            android:textColor="@color/colorHint"
+            android:drawableTop="@drawable/ic_compare"
+            android:layout_marginTop="8dp"
+            android:text="DECIDE" />
 
-    <ImageView
-        android:id="@+id/MainPage_studyImage"
-        android:layout_width="322dp"
-        android:layout_height="178dp"
-        android:layout_marginTop="112dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline_top"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/study_group" />
+        <Button
+            android:id="@+id/MainPage_profileButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorClearWhite"
+            android:textColor="@color/colorHint"
+            android:drawableTop="@drawable/ic_manage_accounts"
+            android:layout_marginTop="8dp"
+            android:text="PROFILE" />
 
-    <TextView
-        android:id="@+id/MainPage_titleText"
-        android:layout_width="142dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="16dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/MainPage_titleText"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/include"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
-        app:layout_constraintHorizontal_bias="0.014"
-        app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/MainPage_quoteMessage"
-        android:layout_width="296dp"
-        android:layout_height="48dp"
-        android:text="@string/MainPage_QuoteMessageField"
-        android:textAlignment="center"
-
-        android:textColor="@color/colorPrimaryDark"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guideline_top"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toTopOf="@+id/MainPage_studyImage"
-        app:layout_constraintVertical_bias="0.415" />
-
-    <ImageView
-        android:id="@+id/MainPage_studyImage2"
-        android:layout_width="300dp"
-        android:layout_height="180dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline_top"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@+id/MainPage_quoteMessage"
-        app:layout_constraintVertical_bias="0.068"
-        app:srcCompat="@drawable/study_group2" />
-
-    <TextView
-        android:id="@+id/MainPage_exploreText"
-        android:layout_width="80dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="20dp"
-        android:text="@string/MainPage_exploreText"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@+id/MainPage_exploreButton"
-        app:layout_constraintVertical_bias="0.082" />
-
-    <TextView
-        android:id="@+id/MainPage_findText"
-        android:layout_width="80dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="20dp"
-        android:text="@string/MainPage_findText"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/MainPage_exploreText"
-        app:layout_constraintTop_toBottomOf="@+id/MainPage_findButton"
-        app:layout_constraintVertical_bias="0.082" />
-
-    <TextView
-        android:id="@+id/MainPage_decideText"
-        android:layout_width="80dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="20dp"
-        android:text="@string/MainPage_decideText"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/MainPage_findText"
-        app:layout_constraintTop_toBottomOf="@+id/MainPage_decideButton"
-        app:layout_constraintVertical_bias="0.082" />
-
-    <TextView
-        android:id="@+id/MainPage_applyText"
-        android:layout_width="80dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="20dp"
-        android:text="@string/MainPage_applyText"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/MainPage_decideText"
-        app:layout_constraintTop_toBottomOf="@+id/MainPage_applyButton"
-        app:layout_constraintVertical_bias="0.082" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
