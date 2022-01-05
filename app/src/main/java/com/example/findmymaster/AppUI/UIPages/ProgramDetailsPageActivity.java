@@ -11,7 +11,7 @@ import com.example.findmymaster.AppUI.UIBase;
 import com.example.findmymaster.EventSystem.EventDispatcher;
 import com.example.findmymaster.R;
 
-public class ProgramDetailsPageActivity extends UIBase {
+public class ProgramDetailsPageActivity extends UIBase {5
 
     private TextView universityName;
     private TextView programName;
@@ -83,5 +83,29 @@ public class ProgramDetailsPageActivity extends UIBase {
 
     public static void setProgramNameString(String s) {
         programNameString = s;
+    }
+
+    public static void setDurationString(String durationString) {
+        ProgramDetailsPageActivity.durationString = durationString;
+    }
+
+    public static void setPriceString(String priceString) {
+        ProgramDetailsPageActivity.priceString = priceString;
+    }
+
+    public static void setDateString(String dateString) {
+        ProgramDetailsPageActivity.dateString = dateString;
+    }
+
+    public static void setLanguageString(String languageString) {
+        ProgramDetailsPageActivity.languageString = languageString;
+    }
+
+    public static void setCityString(String cityString) {
+        ProgramDetailsPageActivity.cityString = cityString;
+    }
+
+    public static void setCountryString(String countryString) {
+        ProgramDetailsPageActivity.countryString = countryString;
     }
 }

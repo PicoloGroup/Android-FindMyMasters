@@ -77,6 +77,12 @@ public class FindFragment extends Fragment implements RecyclerFindAdapter.OnMast
         MasterProgramFindUIBox element = masterProgramFindUIBoxList.get(position);
         ProgramDetailsPageActivity.setUniversityNameString(element.getUniversityName());
         ProgramDetailsPageActivity.setProgramNameString(element.getFieldOfStudy());
+        ProgramDetailsPageActivity.setCityString(element.getCity());
+        ProgramDetailsPageActivity.setCountryString(element.getCountry());
+        ProgramDetailsPageActivity.setDateString(element.getDuration());
+        ProgramDetailsPageActivity.setPriceString(element.getPrice());
+        ProgramDetailsPageActivity.setLanguageString(element.getLanguage());
+        ProgramDetailsPageActivity.setDateString(element.getDate());
         switchIntent(mainPageContext,ProgramDetailsPageActivity.class);
     }
 
