@@ -26,6 +26,7 @@ public class ExploreFragment extends Fragment implements RecyclerExploreAdapter.
     private ArrayList<MasterProgramExploreUIBox> masterProgramExploreUIBoxList;
     private RecyclerView recyclerView;
     private Context mainPageContext;
+    private LinearLayoutManager layoutManager;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -57,6 +58,7 @@ public class ExploreFragment extends Fragment implements RecyclerExploreAdapter.
     private void setMasterProgramInfo() {
         masterProgramExploreUIBoxList.add(new MasterProgramExploreUIBox("Koc University","Robotics",R.drawable.study_group3));
         masterProgramExploreUIBoxList.add(new MasterProgramExploreUIBox("Yale University","Data Science",R.drawable.study_group2));
+        masterProgramExploreUIBoxList.add(new MasterProgramExploreUIBox("Harvard University","Data Analytics",R.drawable.study_group));
     }
 
     @Override

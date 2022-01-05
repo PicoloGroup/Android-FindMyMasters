@@ -10,12 +10,12 @@
 
 
     <TextView
-        android:id="@+id/CityDetailsPage_cityName"
+        android:id="@+id/ProfilePage_profilePageHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="12dp"
-        android:text="APPLY"
+        android:text="Profile"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="28sp"
         android:textStyle="bold" />
@@ -30,22 +30,9 @@
         android:background="@color/colorClearRed"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/ApplyPage_studentLabelText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="14sp"
-        android:background="@drawable/red_rounded_corner"
-        android:paddingHorizontal="12sp"
-        android:text="STUDENT"
-        android:textColor="@color/colorClearWhite"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
 
     <TextView
-                android:id="@+id/ApplyPage_studentNameText"
+                android:id="@+id/ProfilePage_NameLabelText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10sp"
@@ -57,7 +44,7 @@
                 android:textColor="@color/colorPrimaryDark"/>
 
             <EditText
-                android:id="@+id/ApplyPage_studentNameEditText"
+                android:id="@+id/ProfilePage_studentNameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
@@ -70,7 +57,7 @@
                 android:textSize="20sp"/>
 
             <TextView
-                android:id="@+id/ApplyPage_studentGenderText"
+                android:id="@+id/ProfilePage_studentGenderText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
@@ -83,7 +70,7 @@
 
 
             <EditText
-                android:id="@+id/ApplyPage_studentGenderEditText"
+                android:id="@+id/ProfilePage_studentGenderEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
@@ -96,7 +83,7 @@
                 android:textSize="20sp"/>
 
             <TextView
-                android:id="@+id/ApplyPage_studentBirthdayText"
+                android:id="@+id/ProfilePage_studentBirthdayText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
@@ -108,7 +95,7 @@
                 android:textColor="@color/colorPrimaryDark"/>
 
             <EditText
-                android:id="@+id/ApplyPage_studentBirthdayEditText"
+                android:id="@+id/ProfilePage_studentBirthdayEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
@@ -121,7 +108,7 @@
                 android:textSize="20sp"/>
 
             <TextView
-                android:id="@+id/ApplyPage_studentSocialSecurityNumberText"
+                android:id="@+id/ProfilePage_studentSocialSecurityNumberText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
@@ -133,7 +120,7 @@
                 android:textColor="@color/colorTransparentBlack"/>
 
             <EditText
-                android:id="@+id/ApplyPage_studentSocialSecurityNumberEditText"
+                android:id="@+id/ProfilePage_studentSocialSecurityNumberEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
@@ -146,6 +133,57 @@
                 android:textSize="20sp" />
 
 
+    <TextView
+                android:id="@+id/ProfilePage_majorText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="10sp"
+                android:paddingHorizontal="12sp"
+                android:text="UNDERGRADUATE PROGRAM"
+                android:textSize="14sp"
+                android:textColor="@color/colorTransparentBlack"/>
+
+            <EditText
+                android:id="@+id/ProfilePage_majorEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/rounded_corner"
+                android:hint="Enter Your Undergraduate Program "
+                android:inputType="text"
+                android:paddingHorizontal="12sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="#818181"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/ProfilePage_gpaText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="10sp"
+                android:paddingHorizontal="12sp"
+                android:text="GPA"
+                android:textSize="14sp"
+                android:textColor="@color/colorTransparentBlack"/>
+
+    <EditText
+                android:id="@+id/ProfilePage_gpaEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rounded_corner"
+                android:hint="Enter GPA Here"
+                android:inputType="text"
+                android:paddingHorizontal="12sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="#818181"
+                android:textSize="20sp"/>
+
     <View
         android:id="@+id/footer_line2"
         android:layout_width="match_parent"
@@ -156,80 +194,16 @@
         android:background="@color/colorClearRed"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/ApplyPage_programLabelText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="22dp"
-        android:background="@drawable/red_rounded_corner"
-        android:paddingHorizontal="12sp"
-        android:text="PROGRAM"
-        android:textColor="@color/colorClearWhite"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <TextView
-                android:id="@+id/ApplyPage_universityText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="10sp"
-                android:layout_marginBottom="10sp"
-                android:paddingHorizontal="12sp"
-                android:text="UNIVERSITY"
-                android:textSize="14sp"
-                android:textColor="@color/colorTransparentBlack"/>
-
-            <EditText
-                android:id="@+id/ApplyPage_universityEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:background="@drawable/rounded_corner"
-                android:hint="Enter University Here"
-                android:inputType="text"
-                android:paddingHorizontal="12sp"
-                android:textColor="@color/colorPrimaryDark"
-                android:textColorHint="#818181"
-                android:textSize="20sp"/>
-
-            <TextView
-                android:id="@+id/ApplyPage_programText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="20sp"
-                android:layout_marginBottom="10sp"
-                android:paddingHorizontal="12sp"
-                android:text="PROGRAM"
-                android:textSize="14sp"
-                android:textColor="@color/colorTransparentBlack"/>
-
-            <EditText
-                android:id="@+id/ApplyPage_programEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/rounded_corner"
-                android:hint="Enter Program Here"
-                android:inputType="text"
-                android:paddingHorizontal="12sp"
-                android:textColor="@color/colorPrimaryDark"
-                android:textColorHint="#818181"
-                android:textSize="20sp"/>
-
     <Button
         android:id="@+id/ApplyPage_submitButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="64dp"
         android:background="@drawable/red_rounded_corner"
         android:fontFamily="sans-serif-black"
-        android:text="Submit"
+        android:text="Update"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/colorClearWhite"

@@ -20,6 +20,13 @@ public class ProgramDetailsPageActivity extends UIBase {
     private Button selectButton;
     private static String universityNameString;
     private static String programNameString;
+    private static String durationString;
+    private static String priceString;
+    private static String dateString;
+    private static String languageString;
+    private static String cityString;
+    private static String countryString;
+
 
     public ProgramDetailsPageActivity() {
         super(EventDispatcher.getInstance());
@@ -33,10 +40,11 @@ public class ProgramDetailsPageActivity extends UIBase {
         //Hooks
         universityName = findViewById(R.id.ProgramDetailsPage_universityNameText);
         programName = findViewById(R.id.ProgramDetailsPage_programNameText);
+        durationString = findViewById(R.id.ProgramDe)
+
         seeCityDetailsButton = findViewById(R.id.ProgramDetailsPage_cityDetailsButton);
         applyButton = findViewById(R.id.ProgramDetailsPage_applyButton);
         selectButton = findViewById(R.id.ProgramDetailsPage_selectButton);
-
         universityName.setText(universityNameString);
         programName.setText(programNameString);
 
@@ -53,7 +61,7 @@ public class ProgramDetailsPageActivity extends UIBase {
         applyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switchIntent(ProgramDetailsPageActivity.this,ApplyPageActivity.class);
+        //        switchIntent(ProgramDetailsPageActivity.this,ApplyPageActivity.class);
             }
         });
 

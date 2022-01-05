@@ -66,6 +66,17 @@
             android:layout_marginTop="8dp"
             android:text="DECIDE" />
 
+        <Button
+            android:id="@+id/MainPage_profileButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorClearWhite"
+            android:textColor="@color/colorHint"
+            android:drawableTop="@drawable/ic_manage_accounts"
+            android:layout_marginTop="8dp"
+            android:text="PROFILE" />
+
     </LinearLayout>
 
 

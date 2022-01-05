@@ -17,7 +17,7 @@
         android:layout_marginTop="12dp"
         android:text="DECIDE"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="28sp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <View
@@ -34,7 +34,6 @@
         android:id="@+id/DecideFragment_recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
-        android:background="@color/colorMainBackground"/>
+        android:background="@color/colorMainBackground" />
 
 </LinearLayout>

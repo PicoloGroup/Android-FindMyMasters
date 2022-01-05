@@ -21,6 +21,7 @@ public class MainPageActivity extends UIBase {
     private Button findButton;
     private Button exploreButton;
     private Button decideButton;
+    private Button profileButton;
 
 
     public MainPageActivity() {
@@ -43,6 +44,7 @@ public class MainPageActivity extends UIBase {
         findButton = findViewById(R.id.MainPage_findButton);
         exploreButton = findViewById(R.id.MainPage_exploreButton);
         decideButton = findViewById(R.id.MainPage_decideButton);
+        profileButton = findViewById(R.id.MainPage_profileButton);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.MainPage_fragmentContainer,exploreFragment).commit();
 
@@ -68,29 +70,47 @@ public class MainPageActivity extends UIBase {
                 activateDecide();
             }
         });
+
+        profileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                activateProfile();
+            }
+        });
     }
 
     //Activating Button Functions
 
     private void activateFind(){
-        lightUpButton(findButton);
+/*        lightUpButton(findButton);
         lightDownButton(exploreButton);
         lightDownButton(decideButton);
+        lightDownButton(profileButton);*/
         getSupportFragmentManager().beginTransaction().replace(R.id.MainPage_fragmentContainer,findFragment).commit();
     }
 
     private void activateExplore(){
-        lightUpButton(exploreButton);
-        lightDownButton(findButton);
-        lightDownButton(decideButton);
+//        lightUpButton(exploreButton);
+//        lightDownButton(findButton);
+//        lightDownButton(decideButton);
+//        lightDownButton(profileButton);
         getSupportFragmentManager().beginTransaction().replace(R.id.MainPage_fragmentContainer,exploreFragment).commit();
     }
 
     private void activateDecide(){
-        lightUpButton(decideButton);
+/*        lightUpButton(decideButton);
         lightDownButton(findButton);
         lightDownButton(exploreButton);
+        lightDownButton(profileButton);*/
         getSupportFragmentManager().beginTransaction().replace(R.id.MainPage_fragmentContainer,decideFragment).commit();
+    }
+
+    private void activateProfile(){
+/*        lightUpButton(profileButton);
+        lightDownButton(findButton);
+        lightDownButton(exploreButton);
+        lightDownButton(decideButton);*/
+        switchIntent(MainPageActivity.this,ProfilePageActivity.class);
     }
 
     private void lightUpButton(Button b){

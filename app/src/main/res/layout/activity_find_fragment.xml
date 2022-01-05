@@ -18,7 +18,7 @@
         android:padding="8dp"
         android:text="FIND"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="28dp"
+        android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"

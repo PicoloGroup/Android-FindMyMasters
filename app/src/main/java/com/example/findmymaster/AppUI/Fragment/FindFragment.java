@@ -55,21 +55,21 @@ public class FindFragment extends Fragment implements RecyclerFindAdapter.OnMast
     }
 
     private void setMasterProgramInfo() {
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Computer Science"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("University of Oxford","Economics"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("London Business School","Financial Economics"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Istanbul Technical University","Computer Vision"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Bogazici University","Artificial Intelligence"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Middle East Technical University","Cyber Security"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Stanford University","Data Science for Decision Making"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Yale University","Digital Business"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Harvard University","Big Data Management"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Stanford University","Machine Learning"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Yale University","Data Analytics"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Harvard University","Game Design"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Princeton University","Data Engineering"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Data Analytics"));
-        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("University of California","Signal Processing"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Computer Science","27850 USD","24 months","English","11 Dec 2022","Istanbul","Turkey"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("University of Oxford","Economics","48250 USD","12 months","English","31 Sep 2022","Oxfordshire","England"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("London Business School","Financial Economics","44550 USD","24 months","English","21 Oct 2022","London","England"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Istanbul Technical University","Computer Vision","11850 USD","24 months","English","18 Sep 2022","Istanbul","Turkey"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Bogazici University","Artificial Intelligence","13850 USD","24 months","English","22 Aug 2022","Istanbul","Turkey"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Middle East Technical University","Cyber Security","12850 USD","24 months","English","14 Sep 2022","Ankara","Turkey"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Stanford University","Data Science for Decision Making","55850 USD","24 months","English","04 Dec 2022","Stanford","United States"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Yale University","Digital Business","53350 USD","24 months","English","24 Dec 2022","New Haven","United States"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Harvard University","Big Data Management","63450 USD","24 months","English","31 Sep 2022","Cambridge","United States"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Stanford University","Machine Learning","65450 USD","24 months","English","01 Oct 2022","Stanford","United States"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Yale University","Data Analytics","57150 USD","24 months","English","11 Sep 2022","New Haven","United States"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Harvard University","Game Design","66950 USD","24 months","English","18 Oct 2022","Cambridge","United States"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Princeton University","Data Engineering","69990 USD","24 months","English","13 Dec 2022","Princeton","United States"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("Koc University","Data Analytics","31550 USD","24 months","English","21 Jan 2022","Istanbul","Turkey"));
+        masterProgramFindUIBoxList.add(new MasterProgramFindUIBox("University of California","Signal Processing","70850 USD","24 months","English","21 Aug 2022","Oakland","United States"));
     }
 
     @Override
