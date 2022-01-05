@@ -23,6 +23,11 @@ public class MainPageActivity extends UIBase {
     private Button decideButton;
     private Button profileButton;
 
+    private static boolean decideFlag = false;
+
+    public static void requestDecideFragment(){
+        decideFlag = true;
+    }
 
     public MainPageActivity() {
         super(EventDispatcher.getInstance());
@@ -46,8 +51,13 @@ public class MainPageActivity extends UIBase {
         decideButton = findViewById(R.id.MainPage_decideButton);
         profileButton = findViewById(R.id.MainPage_profileButton);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.MainPage_fragmentContainer,exploreFragment).commit();
-
+        if(!decideFlag) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.MainPage_fragmentContainer, exploreFragment).commit();
+        }
+        else{
+            getSupportFragmentManager().beginTransaction().replace(R.id.MainPage_fragmentContainer, decideFragment).commit();
+            decideFlag = false;
+        }
         //Listeners
 
         findButton.setOnClickListener(new View.OnClickListener() {

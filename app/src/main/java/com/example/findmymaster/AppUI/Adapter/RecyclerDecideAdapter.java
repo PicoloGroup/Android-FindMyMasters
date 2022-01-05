@@ -3,6 +3,7 @@ package com.example.findmymaster.AppUI.Adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -32,6 +33,7 @@ public class RecyclerDecideAdapter extends RecyclerView.Adapter<RecyclerDecideAd
         private final TextView programDuration;
         private final TextView programCost;
         private final TextView programLanguage;
+        private final ImageView universityImage;
 
         private OnMasterProgramListener onMasterProgramListener;
 
@@ -45,6 +47,7 @@ public class RecyclerDecideAdapter extends RecyclerView.Adapter<RecyclerDecideAd
             programDuration = view.findViewById(R.id.DecideCardView_programDurationValue);
             programCost = view.findViewById(R.id.DecideCardView_programCostValue);
             programLanguage = view.findViewById(R.id.DecideCardView_programLanguageValue);
+            universityImage = view.findViewById((R.id.DecideCardView_universityImage));
 
             this.onMasterProgramListener = onMasterProgramListener;
             view.setOnClickListener(this);
@@ -77,6 +80,7 @@ public class RecyclerDecideAdapter extends RecyclerView.Adapter<RecyclerDecideAd
         String programDuration = masterProgramDecideUIBoxList.get(position).getProgramDuration();
         String programCost = masterProgramDecideUIBoxList.get(position).getProgramCost();
         String programLanguage = masterProgramDecideUIBoxList.get(position).getProgramLanguage();
+        int universityImage = masterProgramDecideUIBoxList.get(position).getUniversityImage();
 
         holder.countryName.setText(countryName);
         holder.universityName.setText(universityName);
@@ -85,6 +89,8 @@ public class RecyclerDecideAdapter extends RecyclerView.Adapter<RecyclerDecideAd
         holder.programDuration.setText(programDuration);
         holder.programCost.setText(programCost);
         holder.programLanguage.setText(programLanguage);
+        holder.universityImage.setImageResource(universityImage);
+
     }
 
     @Override
