@@ -14,17 +14,17 @@
         android:layout_height="200dp">
 
         <ImageView
-            android:id="@+id/cardViewImage1"
-            android:layout_width="98dp"
-            android:layout_height="97dp"
+            android:id="@+id/DecideCardView_universityImage"
+            android:layout_width="79dp"
+            android:layout_height="88dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="1dp"
-            android:layout_marginTop="103dp"
-            android:layout_marginEnd="312dp"
-            android:layout_marginBottom="0dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="108dp"
+            android:layout_marginEnd="292dp"
+            android:layout_marginBottom="4dp"
             app:srcCompat="@drawable/ic_university" />
 
         <TextView
@@ -131,10 +131,10 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:background="@drawable/red_rounded_corner"
+            android:background="@drawable/decide_page_rounded"
             android:paddingHorizontal="4dp"
             android:text="TextView"
-            android:textColor="@color/colorClearWhite" />
+            android:textColor="@color/colorTransparentBlack" />
 
         <TextView
             android:id="@+id/DecideCardView_universityNameValue"
@@ -144,10 +144,10 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="16dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/red_rounded_corner"
+            android:background="@drawable/decide_page_rounded"
             android:paddingHorizontal="4dp"
             android:text="TextView"
-            android:textColor="@color/colorClearWhite" />
+            android:textColor="@color/colorTransparentBlack" />
 
         <TextView
             android:id="@+id/DecideCardView_programNameValue"
@@ -157,10 +157,10 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="16dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/red_rounded_corner"
+            android:background="@drawable/decide_page_rounded"
             android:paddingHorizontal="4dp"
             android:text="TextView"
-            android:textColor="@color/colorClearWhite" />
+            android:textColor="@color/colorTransparentBlack" />
 
     </RelativeLayout>
 

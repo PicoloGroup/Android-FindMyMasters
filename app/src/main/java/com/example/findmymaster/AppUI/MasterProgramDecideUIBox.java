@@ -9,20 +9,30 @@ public class MasterProgramDecideUIBox {
     private String ProgramCost;
     private String ProgramDuration;
     private String ProgramLanguage;
+    private String CityName;
+    private String Date;
+    private int UniversityImage;
 
-    public MasterProgramDecideUIBox(String countryName, String universityName, String fieldOfStudy,
-                                    String programRank, String programCost, String programDuration, String programLanguage) {
+    public MasterProgramDecideUIBox(String countryName,String cityName, String universityName, String fieldOfStudy,
+                                    String programRank, String programCost, String programDuration, String date, String programLanguage,int universityImage) {
         CountryName = countryName;
+        CityName = cityName;
         UniversityName = universityName;
         FieldOfStudy = fieldOfStudy;
         ProgramRank = programRank;
         ProgramCost = programCost;
         ProgramDuration = programDuration;
+        Date = date;
         ProgramLanguage = programLanguage;
+        UniversityImage = universityImage;
     }
 
     public String getCountryName() {
         return CountryName;
+    }
+
+    public String getCityName() {
+        return CityName;
     }
 
     public String getUniversityName() {
@@ -41,6 +51,8 @@ public class MasterProgramDecideUIBox {
         return ProgramCost;
     }
 
+    public String getDate(){return Date;}
+
     public String getProgramDuration() {
         return ProgramDuration;
     }
@@ -48,4 +60,6 @@ public class MasterProgramDecideUIBox {
     public String getProgramLanguage() {
         return ProgramLanguage;
     }
+
+    public int getUniversityImage() { return UniversityImage; }
 }

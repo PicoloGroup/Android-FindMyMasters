@@ -56,9 +56,9 @@ public class ExploreFragment extends Fragment implements RecyclerExploreAdapter.
     }
 
     private void setMasterProgramInfo() {
-        masterProgramExploreUIBoxList.add(new MasterProgramExploreUIBox("Koc University","Robotics",R.drawable.study_group3));
-        masterProgramExploreUIBoxList.add(new MasterProgramExploreUIBox("Yale University","Data Science",R.drawable.study_group2));
-        masterProgramExploreUIBoxList.add(new MasterProgramExploreUIBox("Harvard University","Data Analytics",R.drawable.study_group));
+        masterProgramExploreUIBoxList.add(new MasterProgramExploreUIBox("Koc University","Robotics","27850 USD","24 months","English","11 Dec 2022","Istanbul","Turkey",R.drawable.study_group3));
+        masterProgramExploreUIBoxList.add(new MasterProgramExploreUIBox("Yale University","Robotics","62850 USD","24 months","English","31 Dec 2022","New Haven","USA",R.drawable.study_group2));
+        masterProgramExploreUIBoxList.add(new MasterProgramExploreUIBox("Oxford University","Finance","48850 USD","12 months","English","21 Sep 2022","Oxford","England",R.drawable.study_group));
     }
 
     @Override
@@ -66,6 +66,12 @@ public class ExploreFragment extends Fragment implements RecyclerExploreAdapter.
         MasterProgramExploreUIBox element = masterProgramExploreUIBoxList.get(position);
         ProgramDetailsPageActivity.setUniversityNameString(element.getUniversityName());
         ProgramDetailsPageActivity.setProgramNameString(element.getFieldOfStudy());
+        ProgramDetailsPageActivity.setCityString(element.getCity());
+        ProgramDetailsPageActivity.setCountryString(element.getCountry());
+        ProgramDetailsPageActivity.setDateString(element.getDate());
+        ProgramDetailsPageActivity.setPriceString(element.getPrice());
+        ProgramDetailsPageActivity.setLanguageString(element.getLanguage());
+        ProgramDetailsPageActivity.setDurationString(element.getDuration());
         switchIntent(mainPageContext,ProgramDetailsPageActivity.class);
     }
 

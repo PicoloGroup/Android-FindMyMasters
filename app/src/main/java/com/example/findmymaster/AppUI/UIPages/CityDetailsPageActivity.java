@@ -21,6 +21,9 @@ public class CityDetailsPageActivity extends UIBase {
     private TextView pollutionIndex;
     private TextView climateIndex;
 
+    private static String countryNameString;
+    private static String cityNameString;
+
     public CityDetailsPageActivity() {
         super(EventDispatcher.getInstance());
     }
@@ -43,5 +46,16 @@ public class CityDetailsPageActivity extends UIBase {
         pollutionIndex = findViewById(R.id.CityDetailsPage_pollutionIndexValue);
         climateIndex = findViewById(R.id.CityDetailsPage_climateIndexValue);
 
+        //Setting Texts
+        countryName.setText(countryNameString);
+        cityName.setText(cityNameString);
+    }
+
+    public static void setCountryNameString(String countryNameString) {
+        CityDetailsPageActivity.countryNameString = countryNameString;
+    }
+
+    public static void setCityNameString(String cityNameString) {
+        CityDetailsPageActivity.cityNameString = cityNameString;
     }
 }
